@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".Join_User_PetInfo_Activity"
+            android:exported="false" />
+        <activity
             android:name=".Join_PhoneNumber_Activity"
             android:exported="false" />
         <activity
@@ -24,7 +27,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>
