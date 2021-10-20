@@ -5,18 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".Join_PhoneNumber_Activity">
+    tools:context=".JoinCompliteActivity">
 
     <!-- tool bar -->
     <include
         layout="@layout/toolbar_yellow"
         android:id="@+id/toolbar"/>
 
-    <!-- 예시 -> 나중 변경 ( 순서 아이콘으로 ) -->
+    <!-- 예시 -> 나중 변경 -->
     <ImageView
         android:layout_width="211dp"
         android:layout_height="75dp"
-        android:src="@drawable/count1"
+        android:src="@drawable/count4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.92"
@@ -24,7 +24,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.121" />
 
-    <!-- 레이블 - 휴대전화 번호 인증 -->
+    <!-- 텍스트뷰 - 가입완료 -->
     <TextView
         android:id="@+id/btn1"
         android:layout_width="wrap_content"
@@ -32,7 +32,7 @@
         android:background="?attr/selectableItemBackground"
         android:fontFamily="@font/jalnanotf"
         android:lineSpacingExtra="4sp"
-        android:text="휴대전화 번호 인증"
+        android:text="가입 완료"
         android:textColor="@color/down_black"
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -50,7 +50,7 @@
         android:background="?attr/selectableItemBackground"
         android:fontFamily="@font/jalnan"
         android:lineSpacingExtra="4sp"
-        android:text="보호자의 정보 확인을 위해 인증이 필요합니다"
+        android:text="가입이 완료 되었습니다."
         android:textColor="@color/down_gray"
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -60,40 +60,35 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.316" />
 
-    <!-- 에딧텍스트 - 휴대폰 번호 -->
-    <EditText
-        android:id="@+id/inputPhoneNum"
-        android:layout_width="380dp"
-        android:layout_height="56dp"
-        android:background="@drawable/round"
-        android:ems="10"
-        android:fontFamily="@font/jalnan"
-        android:hint="   휴대폰 번호"
-        android:inputType="phone"
+
+    <!-- 예시 -> 나중 변경 (프로필 사진) -->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="280dp"
+        android:src="@drawable/exprofile"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.431"
-        tools:ignore="SpeakableTextPresentCheck" />
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <!-- 버튼 - 인증 번호 요청 -->
+    <!-- 버튼 - petfinder 시작하기 -->
     <Button
         android:id="@+id/btnRevercode"
         android:layout_width="380dp"
         android:layout_height="56dp"
-        android:background="@drawable/requestbutton_yellow"
+        android:background="@drawable/basicbutton_yellow"
         android:fontFamily="@font/jalnan"
-        android:text="인증번호 요청"
-        android:textColor="@color/yello"
-        android:textSize="17sp"
+        android:text="PetFinder 시작하기"
+        android:textColor="@color/white"
+        android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.537"
+        app:layout_constraintVertical_bias="0.693"
         tools:ignore="TextContrastCheck" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,223 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".Join_User_PetInfo_Activity">
+    android:layout_height="match_parent">
 
-    <include
-        layout="@layout/toolbar_yellow"
-        android:id="@+id/toolbar"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".Join_User_PetInfo_Activity">
 
-    <ImageView
-        android:layout_width="211dp"
-        android:layout_height="75dp"
-        android:src="@drawable/count3"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.92"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.121" />
+        <!-- tool bar -->
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_yellow"
+            tools:layout_editor_absoluteX="59dp"
+            tools:layout_editor_absoluteY="445dp" />
 
-
-    <TextView
-        android:id="@+id/btn1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="?attr/selectableItemBackground"
-        android:fontFamily="@font/jalnanotf"
-        android:lineSpacingExtra="4sp"
-        android:text="반려동물 등록"
-        android:textColor="@color/down_black"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.104"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.259" />
-
-    <TextView
-        android:id="@+id/btn3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="?attr/selectableItemBackground"
-        android:fontFamily="@font/jalnan"
-        android:lineSpacingExtra="4sp"
-        android:text="등록할 반려동물 정보를 등록해 주세요"
-        android:textColor="@color/down_gray"
-        android:textSize="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.146"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.316" />
-
-    <!--    <EditText-->
-<!--        android:id="@+id/inputEmail"-->
-<!--        android:layout_width="380dp"-->
-<!--        android:layout_height="56dp"-->
-<!--        android:background="@drawable/round"-->
-<!--        android:ems="10"-->
-<!--        android:fontFamily="@font/micross"-->
-<!--        android:hint="   이메일"-->
-<!--        android:inputType="textEmailAddress"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.483"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintVertical_bias="0.52"-->
-<!--        tools:ignore="SpeakableTextPresentCheck" />-->
-
-<!--    <EditText-->
-<!--        android:id="@+id/inputPw"-->
-<!--        android:layout_width="380dp"-->
-<!--        android:layout_height="56dp"-->
-<!--        android:background="@drawable/round"-->
-<!--        android:ems="10"-->
-<!--        android:fontFamily="@font/micross"-->
-<!--        android:hint="   비밀번호(8자리 이상)"-->
-<!--        android:inputType="textPassword"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.483"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintVertical_bias="0.623"-->
-<!--        tools:ignore="SpeakableTextPresentCheck" />-->
-
-<!--    <EditText-->
-<!--        android:id="@+id/inputRePw"-->
-<!--        android:layout_width="380dp"-->
-<!--        android:layout_height="56dp"-->
-<!--        android:background="@drawable/round"-->
-<!--        android:ems="10"-->
-<!--        android:fontFamily="@font/micross"-->
-<!--        android:hint="   비밀번호 재확인"-->
-<!--        android:inputType="textPassword"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.516"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintVertical_bias="0.724"-->
-<!--        tools:ignore="SpeakableTextPresentCheck" />-->
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="400dp"
-        android:fontFamily="@font/micross"
-        android:text="이름"
-        android:textColor="@color/down_gray"
-        android:textSize="18dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <!--    <EditText-->
-<!--        android:id="@+id/inputPetBirth"-->
-<!--        android:layout_width="300dp"-->
-<!--        android:layout_height="56dp"-->
-<!--        android:background="@drawable/round"-->
-<!--        android:ems="10"-->
-<!--        android:fontFamily="@font/micross"-->
-<!--        android:inputType="textPersonName"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.765"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintVertical_bias="0.568"-->
-<!--        tools:ignore="SpeakableTextPresentCheck" />-->
-
-
-    <!--    <DatePicker-->
-<!--        android:id="@+id/inputPetBirth"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="184dp"-->
-<!--        android:calendarViewShown="false"-->
-<!--        android:datePickerMode="calendar"-->
-<!--        android:visibility="invisible"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.573"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
-
-    <EditText
-        android:id="@+id/inputPetName"
-        android:layout_width="300dp"
-        android:layout_height="56dp"
-        android:background="@drawable/round"
-        android:ems="10"
-        android:fontFamily="@font/micross"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.855"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.567"
-        tools:ignore="SpeakableTextPresentCheck"
-        android:drawableRight="@drawable/ic_baseline_create_24_red"/>
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="480dp"
-        android:fontFamily="@font/micross"
-        android:text="생년월일"
-        android:textColor="@color/down_gray"
-        android:textSize="18dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/inputPetName2"
-            android:layout_width="300dp"
-            android:layout_height="56dp"
-            android:background="@drawable/round"
-            android:ems="10"
-            android:fontFamily="@font/micross"
-            android:inputType="textPersonName"
+        <!-- 예시 -> 나중 변경 ( 순서 아이콘으로 ) -->
+        <ImageView
+            android:layout_width="211dp"
+            android:layout_height="75dp"
+            android:src="@drawable/count3"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.855"
+            app:layout_constraintHorizontal_bias="0.925"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.68"
-            tools:ignore="SpeakableTextPresentCheck"
-            android:drawableRight="@drawable/calender"
-            />
+            app:layout_constraintVertical_bias="0.09" />
 
+        <!-- 텍스트뷰 - 반려동물 등록 -->
+        <TextView
+            android:id="@+id/btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:fontFamily="@font/jalnanotf"
+            android:lineSpacingExtra="4sp"
+            android:text="반려동물 등록"
+            android:textColor="@color/down_black"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.038"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.175" />
 
-    <Button
-        android:id="@+id/btnregist"
-        android:layout_width="380dp"
-        android:layout_height="56dp"
-        android:background="@drawable/basicbutton_yellow"
-        android:fontFamily="@font/jalnan"
-        android:text="등록"
-        android:textColor="@color/white"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.859"
-        tools:ignore="TextContrastCheck" />
+        <!-- 텍스트뷰 - 안내문구 -->
+        <TextView
+            android:id="@+id/btn3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:fontFamily="@font/jalnan"
+            android:lineSpacingExtra="4sp"
+            android:text="등록할 반려동물 정보를 등록해 주세요"
+            android:textColor="@color/down_gray"
+            android:textSize="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.052"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.21" />
 
+        <!-- 이미지뷰 -> 나중에 변경 (프로필 추가) -->
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="173dp"
+            android:layout_height="154dp"
+            android:src="@drawable/exprofile"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.448"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.271" />
 
+        <!-- 펫정보 입력 레이아웃 -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:layout_marginTop="380dp"
+            android:columnCount="1"
+            android:rowCount="2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
+            <!-- 공통 펫정보 common_pet_info.xml 처리 -->
+            <include
+                android:id="@+id/petinfo"
+                layout="@layout/common_pet_info"
+                android:layout_width="match_parent"
+                android:layout_height="500dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <!-- 버튼 - 등록 -->
+            <Button
+                android:id="@+id/btnRegist"
+                android:layout_width="380dp"
+                android:layout_height="56dp"
+                android:background="@drawable/basicbutton_yellow"
+                android:fontFamily="@font/jalnan"
+                android:text="등록"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_centerVertical="true"
+                tools:ignore="TextContrastCheck" />
+        </GridLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

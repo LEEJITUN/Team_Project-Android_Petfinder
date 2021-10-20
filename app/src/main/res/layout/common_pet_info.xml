@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/petinfo"
+    android:layout_width="match_parent"
+    android:layout_height="460dp"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <!-- 이름 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="250dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="18dp"
+        android:fontFamily="@font/jalnan"
+        android:text="이름 "
+        android:textColor="@color/down_gray"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <EditText
+                android:id="@+id/inputPetName"
+                android:layout_width="300dp"
+                android:layout_height="56dp"
+                android:layout_marginEnd="18dp"
+                android:background="@drawable/round"
+                android:ems="10"
+                android:fontFamily="@font/micross" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- 생년월일 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="250dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="18dp"
+            android:fontFamily="@font/jalnan"
+            android:text="생년월일"
+            android:textColor="@color/down_gray"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Button
+                android:id="@+id/btn_calender"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="250dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/calender"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/btn_pet_brith"
+                android:layout_width="300dp"
+                android:layout_height="56dp"
+                android:layout_marginEnd="18dp"
+                android:background="@drawable/round"
+                android:ems="10"
+                android:fontFamily="@font/jalnan" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <!-- 펫 종류 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="170dp"
+        android:layout_marginBottom="250dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="18dp"
+            android:fontFamily="@font/jalnan"
+            android:text="펫 종류   "
+            android:textColor="@color/down_gray"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Button
+                android:id="@+id/btn_more_navi_petkind"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="250dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/check"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/inputPetKind"
+                android:layout_width="300dp"
+                android:layout_height="56dp"
+                android:layout_marginEnd="18dp"
+                android:background="@drawable/round"
+                android:ems="10"
+                android:fontFamily="@font/micross" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!-- 몸무게 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="240dp"
+        android:layout_marginBottom="250dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="18dp"
+            android:fontFamily="@font/jalnan"
+            android:text="몸무게    "
+            android:textColor="@color/down_gray"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Button
+                android:id="@+id/btn_more_navi_weight"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="250dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/check"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/inputPetWeight"
+                android:layout_width="300dp"
+                android:layout_height="56dp"
+                android:layout_marginEnd="18dp"
+                android:background="@drawable/round"
+                android:ems="10"
+                android:fontFamily="@font/micross" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!-- 등록 번호 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="310dp"
+        android:layout_marginBottom="250dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="18dp"
+            android:fontFamily="@font/jalnan"
+            android:text="등록번호"
+            android:textColor="@color/down_gray"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <EditText
+                android:id="@+id/inputPetRegistNumber"
+                android:layout_width="300dp"
+                android:layout_height="56dp"
+                android:layout_marginEnd="18dp"
+                android:background="@drawable/round"
+                android:ems="10"
+                android:fontFamily="@font/micross"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!-- 성별 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_marginTop="390dp"
+        android:layout_marginBottom="250dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="18dp"
+            android:fontFamily="@font/jalnan"
+            android:text="성별"
+            android:textColor="@color/down_gray"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- 라디오 버튼 -->
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:rowCount="2"
+                android:columnCount="1">
+
+                <!-- 라디오 버튼 윗줄 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <RadioButton
+                        android:id="@+id/radio_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:fontFamily="@font/jalnan"
+                        android:minHeight="48dp"
+                        android:onClick="onRadioButtonClicked"
+                        android:text="모름"
+                        android:textColor="@color/down_black"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:id="@+id/radio_male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:fontFamily="@font/jalnan"
+                        android:minHeight="48dp"
+                        android:onClick="onRadioButtonClicked"
+                        android:text="수컷"
+                        android:textColor="@color/down_black"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:id="@+id/radio_female"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:fontFamily="@font/jalnan"
+                        android:minHeight="48dp"
+                        android:onClick="onRadioButtonClicked"
+                        android:text="암컷"
+                        android:textColor="@color/down_black"
+                        android:textSize="18dp" />
+
+                </LinearLayout>
+
+                <!-- 라디오 버튼 아랫줄 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <RadioButton
+                        android:id="@+id/radio_male_neutering"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:fontFamily="@font/jalnan"
+                        android:onClick="onRadioButtonClicked"
+                        android:text="중성화수컷"
+                        android:textColor="@color/down_black"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:id="@+id/radio_female_neutering"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="중성화암컷"
+                        android:textColor="@color/down_black"
+                        android:fontFamily="@font/jalnan"
+                        android:textSize="18dp"
+                        android:onClick="onRadioButtonClicked"/>
+                </LinearLayout>
+
+            </GridLayout>
+        </RadioGroup>
+    </LinearLayout>
+</FrameLayout>

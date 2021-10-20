@@ -12,10 +12,10 @@ class Join_UserInfo_Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_join_uer_info)
 
-        val btnRevercode : Button = findViewById(R.id.btnRevercode)
+        val btnregist : Button = findViewById(R.id.btnregist)
 
-        // 회원정보 입력 페이지 이동
-        btnRevercode.setOnClickListener(View.OnClickListener {
+        // 회원 팻 정보 입력 페이지 이동 ( Join_User_PetInfo_Activity )
+        btnregist.setOnClickListener(View.OnClickListener {
             val intent = Intent(applicationContext, Join_User_PetInfo_Activity::class.java)
             startActivity(intent)
         })

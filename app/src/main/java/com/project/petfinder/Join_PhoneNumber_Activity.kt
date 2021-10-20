@@ -13,7 +13,7 @@ class Join_PhoneNumber_Activity : AppCompatActivity() {
 
         val btnRevercode : Button = findViewById(R.id.btnRevercode)
 
-        // 회원정보 입력 페이지 이동
+        // 회원정보 입력 페이지 이동 ( Join_UserInfo_Activity )
         btnRevercode.setOnClickListener(View.OnClickListener {
             val intent = Intent(applicationContext, Join_UserInfo_Activity::class.java)
             startActivity(intent)

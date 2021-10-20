@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".JoinCompliteActivity"
+            android:exported="false" />
+        <activity
             android:name=".Join_User_PetInfo_Activity"
             android:exported="false" />
         <activity
