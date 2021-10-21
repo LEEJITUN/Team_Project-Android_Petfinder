@@ -54,7 +54,8 @@
         android:layout_height="55dp"
         android:layout_marginTop="15dp"
         android:background="@drawable/round"
-        android:fontFamily="@font/jalnan"/>
+        android:fontFamily="@font/jalnan"
+        android:layout_margin="10dp"/>
     <!-- My pet Picture -->
     <Spinner
         android:id="@+id/spinner2"
@@ -62,7 +63,8 @@
         android:layout_height="55dp"
         android:layout_marginTop="15dp"
         android:background="@drawable/round"
-        android:fontFamily="@font/jalnan"/>
+        android:fontFamily="@font/jalnan"
+        android:layout_margin="10dp"/>
 
     <Button
         android:id="@+id/btn_addmypetpic"
@@ -75,9 +77,21 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView"
+        android:layout_height="160dp"
         android:layout_marginTop="15dp"
+        android:fontFamily="@font/jalnan"
+        android:text="반려동물과 어떤 하루를 보냈나요? :)"
+        android:padding="15dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/round"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/orange_june"
+        android:text="핀더톡에 공유하기"
+        android:textColor="@android:color/white"
         android:fontFamily="@font/jalnan"/>
 
 </android.widget.LinearLayout>

@@ -55,8 +55,7 @@
         android:orientation="horizontal">
 
         <!-- Tab Menu -->
-        <TabHost xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
+        <TabHost
             android:id="@android:id/tabhost"
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
@@ -70,8 +69,8 @@
                 <TabWidget
                     android:id="@android:id/tabs"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-                </TabWidget>
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"></TabWidget>
 
                 <FrameLayout
                     android:id="@android:id/tabcontent"
