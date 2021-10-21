@@ -6,10 +6,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <!-- tool bar -->
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbar_sky" />
 
+    <!-- 텍스트뷰 - 비밀번호 변경 문구 -->
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
@@ -27,6 +29,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.108" />
 
+    <!-- 뷰 - 일자 선 -->
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
@@ -35,6 +38,7 @@
         tools:layout_editor_absoluteX="-16dp"
         tools:layout_editor_absoluteY="129dp" />
 
+    <!-- 텍스트뷰 - 비밀번호 변경 안내 문구 -->
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -48,6 +52,7 @@
         tools:layout_editor_absoluteX="17dp"
         tools:layout_editor_absoluteY="144dp" />
 
+    <!-- 텍스트뷰 - 비밀번호 변경 안내 문구 -->
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
@@ -59,30 +64,33 @@
         tools:layout_editor_absoluteX="238dp"
         tools:layout_editor_absoluteY="144dp" />
 
+    <!-- 텍스트뷰 - 비밀번호 변경 안내 문구 -->
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/jalnanotf"
         android:text="· 다른 아이디/사이트에서 사용한 적 없는 비밀번호"
-        android:textColor="#F44336"
+        android:textColor="#EA5148"
         android:textSize="12dp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="18dp"
         tools:layout_editor_absoluteY="186dp" />
 
+    <!-- 텍스트뷰 - 비밀번호 변경 안내 문구 -->
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/jalnanotf"
         android:text="· 이전에 사용한 적 없는 비밀번호"
-        android:textColor="#F44336"
+        android:textColor="#EA5148"
         android:textSize="12dp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="18dp"
         tools:layout_editor_absoluteY="206dp" />
 
+    <!-- 텍스트뷰 - 비밀번호 변경 안내 문구 -->
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
@@ -94,6 +102,7 @@
         tools:layout_editor_absoluteX="197dp"
         tools:layout_editor_absoluteY="206dp" />
 
+    <!-- EditText - 현재 비밀번호 입력 -->
     <EditText
         android:id="@+id/inputPw"
         android:layout_width="380dp"
@@ -111,6 +120,7 @@
         app:layout_constraintVertical_bias="0.374"
         tools:ignore="SpeakableTextPresentCheck" />
 
+    <!-- EditText - 바꿀 비밀번호 입력 -->
     <EditText
         android:id="@+id/inputRePw1"
         android:layout_width="380dp"
@@ -128,6 +138,7 @@
         app:layout_constraintVertical_bias="0.475"
         tools:ignore="SpeakableTextPresentCheck" />
 
+    <!-- EditText - 바꿀 비밀번호 확인 -->
     <EditText
         android:id="@+id/inputRePw2"
         android:layout_width="380dp"
@@ -145,11 +156,12 @@
         app:layout_constraintVertical_bias="0.574"
         tools:ignore="SpeakableTextPresentCheck" />
 
+    <!-- Button - 취소 버튼 -->
     <Button
         android:id="@+id/btnCancel"
-        android:layout_width="183dp"
-        android:layout_height="52dp"
-        android:background="@drawable/basicbutton_sky"
+        android:layout_width="181dp"
+        android:layout_height="61dp"
+        android:background="#EA5148"
         android:fontFamily="@font/jalnan"
         android:text="취소"
         android:textColor="@color/white"
@@ -162,10 +174,11 @@
         app:layout_constraintVertical_bias="0.702"
         tools:ignore="TextContrastCheck" />
 
+    <!-- Button - 확인 버튼 -->
     <Button
         android:id="@+id/btnSubmit"
-        android:layout_width="183dp"
-        android:layout_height="52dp"
+        android:layout_width="181dp"
+        android:layout_height="61dp"
         android:background="@drawable/basicbutton_sky"
         android:fontFamily="@font/jalnan"
         android:text="확인"
@@ -178,6 +191,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.703"
         tools:ignore="TextContrastCheck" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
