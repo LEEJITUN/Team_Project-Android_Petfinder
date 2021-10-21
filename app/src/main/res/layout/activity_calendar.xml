@@ -1,28 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<CalendarView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <!-- tool bar -->
-    <include
-        layout="@layout/toolbar_green"
-        android:id="@+id/toolbar"/>
+    android:layout_height="650dp"
+    android:background="@color/white">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <!-- tool bar -->
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_green" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/jalnanotf"
-            android:textColor="@color/white"
-            android:textSize="30dp"
-            android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
-            android:text="2021.10" />
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/jalnanotf"
+            android:text="2021.10"
+            android:textColor="@color/white"
+            android:textSize="30dp" />
 
-
+        <Button
+            android:id="@+id/btn_Pet_Check"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/ic_baseline_keyboard_arrow_down_24"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         <TextView
             android:id="@+id/baseBtn1"
@@ -30,34 +40,76 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
-            android:fontFamily="@font/jalnanotf"
-            android:textColor="@color/white"
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
-            android:text="TODAY" />
+            android:fontFamily="@font/jalnanotf"
+            android:text="TODAY"
+            android:textColor="@color/white" />
 
+        <CalendarView
+            android:id="@+id/CalendarView"
+            android:layout_width="match_parent"
+            android:layout_height="310dp"
+            android:layout_marginTop="55dp"
+            tools:ignore="InvalidId,MissingConstraints" />
+
+        <!-- 등록일정 리스트 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="380dp"
+                android:fontFamily="@font/jalnanotf"
+                android:text="2021.10.21 수요일"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="29dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="380dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/button_round"
+                android:fontFamily="@font/jalnanotf"
+                android:text="+일정등록"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="420dp">
+
+<!--            <TextView
+                android:id="@+id/btn_list1"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="425dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/requestbutton_down_black"
+                android:fontFamily="@font/jalnan"
+                android:textColor="@color/down_gray"
+                android:textSize="18dp"
+                android:text="동물병원 11:00 건강검진 예약" />-->
+            <ListView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="225dp"
+                android:background="@color/gray"
+                android:fontFamily="@font/jalnanotf"
+                tools:ignore="InvalidId" />
+
+        </LinearLayout>
     </RelativeLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/jalnanotf"
-            android:layout_marginTop="350dp"
-            android:text="안녕하숑 오늘의 일정은~" />
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/jalnanotf"
-            android:layout_marginTop="350dp"
-            android:text="이건왜 여기있는가"/>
-
-    </LinearLayout>
-
-
-
-
-</CalendarView>
+</androidx.constraintlayout.widget.ConstraintLayout>
