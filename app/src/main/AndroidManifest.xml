@@ -11,6 +11,12 @@
         android:theme="@style/Theme.MyApplication">
 
         <activity
+            android:name=".Calendar_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Calendar_New_Schedule_Activity"
+            android:exported="false" />
+        <activity
             android:name=".CommonNavActivity"
             android:exported="false" />
         <activity
