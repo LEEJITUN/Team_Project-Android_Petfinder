@@ -35,7 +35,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:minHeight="48dp"
-            android:text="My" />
+            android:text="My"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/jalnan"/>
         <!-- Write -->
         <ImageView
             android:layout_width="50dp"
@@ -63,11 +65,19 @@
         android:fontFamily="@font/jalnan"/>
 
     <Button
-        android:id="@+id/btn_calender"
+        android:id="@+id/btn_addmypetpic"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/ic_baseline_add_to_photos_24" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/jalnan"/>
 
 </android.widget.LinearLayout>
