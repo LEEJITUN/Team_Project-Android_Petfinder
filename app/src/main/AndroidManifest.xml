@@ -40,7 +40,17 @@
             android:exported="false" />
         <activity
             android:name=".Findertalk_faindertalktalk"
-            android:exported="false" />
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Findertalk_mypetpic_write"
+            android:exported="false">
+        </activity>
         <activity
             android:name=".LoginActivity"
             android:exported="true">
