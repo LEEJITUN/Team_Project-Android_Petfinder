@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+
+    <!-- tool bar -->
+    <include
+        layout="@layout/toolbar_yellow"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/toolbar" />
+
+    <!-- 이미지뷰 - 강아지 발바닥 이미지 -->
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/petfoot"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 텍스트뷰 - PetFinder -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="450dp"
+        android:background="?attr/selectableItemBackground"
+        android:fontFamily="@font/jalnanotf"
+        android:lineSpacingExtra="4sp"
+        android:text="PetFinder"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.038"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.175" />
+
+    <!-- 메인 박스 - 회원 반려동물 정보 -->
+    <RelativeLayout
+        android:layout_width="344dp"
+        android:layout_height="210dp"
+        android:layout_marginBottom="428dp"
+        android:background="@drawable/mainbox_white"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- 이미지뷰 -> 나중에 변경 (프로필 추가) -->
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/exprofile" />
+
+        <!-- 텍스트 뷰 - 반려동물 이름 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="140dp"
+            android:text="시니"
+            android:fontFamily="@font/jalnan"
+            android:textColor="@color/down_black"
+            android:textSize="30dp" />
+
+        <!-- 텍스트 뷰 - 품종 -->
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="140dp"
+            android:text="품종"
+            android:fontFamily="@font/jalnan"
+            android:textColor="@color/down_gray"
+            android:textSize="15dp" />
+
+        <!-- 텍스트 뷰 - 반려동물 품종 값 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="210dp"
+            android:text="포메라니안"
+            android:fontFamily="@font/jalnan"
+            android:textColor="@color/yello"
+            android:textSize="15dp" />
+
+        <!-- 텍스트 뷰 - 나이  -->
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="105dp"
+            android:layout_marginLeft="140dp"
+            android:text="나이"
+            android:fontFamily="@font/jalnan"
+            android:textColor="@color/down_gray"
+            android:textSize="15dp" />
+
+        <!-- 텍스트 뷰 - 반려동물 나이 값 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="105dp"
+            android:layout_marginLeft="210dp"
+            android:text="6살"
+            android:fontFamily="@font/jalnan"
+            android:textColor="@color/down_black"
+            android:textSize="15dp" />
+
+        <!-- 텍스트 뷰 - 함께한지 -->
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="130dp"
+            android:layout_marginLeft="140dp"
+            android:text="함께한지"
+            android:fontFamily="@font/jalnan"
+            android:textColor="@color/down_gray"
+            android:textSize="15dp" />
+
+        <!-- 텍스트 뷰 - 반려동물과 함께한 일수 값 (계산해서 가져옴) -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="130dp"
+            android:layout_marginLeft="210dp"
+            android:text="2550일"
+            android:fontFamily="@font/jalnan"
+            android:textColor="@color/down_black"
+            android:textSize="15dp" />
+
+        <!-- 알림 박스 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="170dp"
+            android:background="@drawable/mainbox_turquoise"
+            android:elevation="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <!-- 알림 텍스트(오늘 할 일 중 1번째 값) -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="9dp"
+                android:fontFamily="@font/jalnanotf"
+                android:text="2021년 10월 26일 시니 병원 가는 날"
+                android:textColor="@color/white"
+                android:textSize="15dp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!-- 텍스트뷰 - PetFinder -->
+
+    <!-- 이미지뷰 - 강아지 발바닥 이미지 -->
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="365dp"
+            android:src="@drawable/petfoot_yellow" />
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:layout_marginTop="390dp"-->
+<!--            tools:text="핀더톡"-->
+<!--            android:fontFamily="@font/jalnan"-->
+<!--            android:textColor="@color/down_black"-->
+<!--            android:textSize="35dp"-->
+<!--            android:textStyle="normal"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="390dp"
+            android:layout_marginLeft="10dp"
+            android:background="?attr/selectableItemBackground"
+            android:fontFamily="@font/jalnanotf"
+            android:lineSpacingExtra="4sp"
+            android:text="핀더톡"
+            android:textColor="@color/down_black"
+            android:textSize="35dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.038"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.175" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="324dp"
+            android:background="#24000000"
+            android:fontFamily="@font/jalnanotf"
+            android:text="더보기 +"
+            android:textColor="@color/down_black"
+            android:textSize="16dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="SpeakableTextPresentCheck">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="450dp">
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="60dp"
+                    android:gravity="center"
+                    android:src="@drawable/cini1" />
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="60dp"
+                    android:gravity="center"
+                    android:src="@drawable/cini2" />
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="60dp"
+                    android:gravity="center"
+                    android:src="@drawable/cini3" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+    </RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,9 +13,6 @@
             android:name=".Pet_info_Register_Activity"
             android:exported="false" />
         <activity
-            android:name=".My_info_Settings_Activity"
-            android:exported="false" />
-        <activity
             android:name=".My_info_Change_pw_Activity"
             android:exported="false" />
         <activity
@@ -43,17 +40,16 @@
             android:name=".Join_UserInfo_Activity"
             android:exported="false" />
         <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".Findertalk_faindertalktalk"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false"/>
         <activity
             android:name=".Findertalk_mypetpic_write"
-            android:exported="false"></activity>
+            android:exported="false" />
+
+        <!-- first layout -->
         <activity
             android:name=".LoginActivity"
             android:exported="true">
@@ -63,6 +59,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Test - first layout
+        (화면 테스트 하고 싶은 분은 위에 로그인 <activity> 를 주석 치고 이걸로 활성화 하세요.)-->
+<!--        <activity-->
+<!--            android:name=".LoginActivity"-->
+<!--            android:exported="true">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
+
     </application>
 
 </manifest>
