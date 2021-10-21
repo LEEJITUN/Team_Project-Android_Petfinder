@@ -25,6 +25,9 @@
             android:name=".Join_UserInfo_Activity"
             android:exported="false" />
         <activity
+            android:name=".Findertalk_faindertalktalk"
+            android:expoted="false" />
+        <activity
             android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
