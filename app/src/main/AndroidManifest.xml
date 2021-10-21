@@ -44,10 +44,20 @@
             android:exported="false" />
         <activity
             android:name=".Findertalk_faindertalktalk"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".Findertalk_mypetpic_write"
             android:exported="false" />
+        <!-- first layout -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <!-- first layout -->
         <activity
@@ -62,16 +72,15 @@
 
         <!-- Test - first layout
         (화면 테스트 하고 싶은 분은 위에 로그인 <activity> 를 주석 치고 이걸로 활성화 하세요.)-->
-<!--        <activity-->
-<!--            android:name=".LoginActivity"-->
-<!--            android:exported="true">-->
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
+        <!--        <activity-->
+        <!--            android:name=".LoginActivity"-->
+        <!--            android:exported="true">-->
+        <!--            <intent-filter>-->
+        <!--                <action android:name="android.intent.action.MAIN" />-->
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
-<!--        </activity>-->
-
+        <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+        <!--            </intent-filter>-->
+        <!--        </activity>-->
     </application>
 
 </manifest>
