@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="650dp"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <!-- tool bar -->
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_sky" />
+
+    <!-- 펫정보 입력 레이아웃 -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="560dp"
+        android:layout_marginTop="60dp"
+        android:columnCount="1"
+        android:rowCount="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- 공통 펫정보 common_pet_info.xml 처리 -->
+        <include
+            android:id="@+id/petinfo"
+            layout="@layout/common_pet_info"
+            android:layout_width="match_parent"
+            android:layout_height="500dp" />
+
+        <!-- 버튼 - 등록 -->
+        <Button
+            android:id="@+id/btnRegist"
+            android:layout_width="380dp"
+            android:layout_height="56dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/basicbutton_sky"
+            android:fontFamily="@font/jalnan"
+            android:text="등록"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            tools:ignore="TextContrastCheck" />
+    </GridLayout>
+
+</FrameLayout>
