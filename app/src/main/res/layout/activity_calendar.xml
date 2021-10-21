@@ -3,9 +3,61 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- tool bar -->
     <include
         layout="@layout/toolbar_green"
         android:id="@+id/toolbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jalnanotf"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="2021.10" />
+
+
+
+        <TextView
+            android:id="@+id/baseBtn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:fontFamily="@font/jalnanotf"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:text="TODAY" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jalnanotf"
+            android:layout_marginTop="350dp"
+            android:text="안녕하숑 오늘의 일정은~" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jalnanotf"
+            android:layout_marginTop="350dp"
+            android:text="이건왜 여기있는가"/>
+
+    </LinearLayout>
+
+
 
 
 </CalendarView>

@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".aaaactivity"
+            android:exported="false" />
+        <activity
+            android:name=".testActivity"
+            android:exported="false" />
+        <activity
             android:name=".CommonNavActivity"
             android:exported="false" />
         <activity
@@ -24,9 +30,6 @@
         <activity
             android:name=".Join_UserInfo_Activity"
             android:exported="false" />
-        <activity
-            android:name=".Findertalk_faindertalktalk"
-            android:expoted="false" />
         <activity
             android:name=".LoginActivity"
             android:exported="true">
