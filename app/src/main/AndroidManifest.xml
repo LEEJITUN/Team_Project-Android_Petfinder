@@ -9,14 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-
+        <activity
+            android:name=".My_info_Settings_Activity"
+            android:exported="false" />
         <activity
             android:name=".My_info_Change_pw_Activity"
             android:exported="false" />
         <activity
             android:name=".Pet_info_Modify_Activity"
             android:exported="false" />
-
         <activity
             android:name=".Calendar_Activity"
             android:exported="false" />
