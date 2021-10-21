@@ -34,10 +34,11 @@
         <entry key="..\:/AndroidStudioProjects/perfind/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.30052083333333335" />
         <entry key="..\:/Users/juny/Desktop/android/20211021_UI/Team_Project-Android_Petfinder/app/src/main/res/layout/activity_findertalk_findertalktalk.xml" value="0.25" />
         <entry key="..\:/Users/juny/Desktop/android/20211021_UI/Team_Project-Android_Petfinder/app/src/main/res/layout/test.xml" value="0.17572463768115942" />
+        <entry key="..\:/Users/juny/Desktop/android/backup_3/Team_Project-Android_Petfinder/app/src/main/res/layout/test_jun.xml" value="0.2151268115942029" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_X" default="true" project-jdk-name="16" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_15" project-jdk-name="16" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
