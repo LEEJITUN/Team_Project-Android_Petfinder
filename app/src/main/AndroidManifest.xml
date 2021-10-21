@@ -10,12 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
-            android:name=".aaaactivity"
-            android:exported="false" />
-        <activity
-            android:name=".testActivity"
-            android:exported="false" />
-        <activity
             android:name=".CommonNavActivity"
             android:exported="false" />
         <activity
