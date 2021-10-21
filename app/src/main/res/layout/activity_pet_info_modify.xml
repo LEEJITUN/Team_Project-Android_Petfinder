@@ -1,47 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="650dp"
-    android:background="@color/white"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    >
+    android:layout_height="match_parent">
 
-    <!-- tool bar -->
-    <include
-        android:id="@+id/toolbar"
-        layout="@layout/toolbar_sky" />
-
-    <!-- 펫정보 입력 레이아웃 -->
-    <GridLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="560dp"
-        android:layout_marginTop="60dp"
-        android:columnCount="1"
-        android:rowCount="2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent"
+        android:background="@color/white">
 
-        <!-- 공통 펫정보 common_pet_info.xml 처리 -->
+        <!-- tool bar -->
         <include
-            android:id="@+id/petinfo"
-            layout="@layout/common_pet_info"
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_sky" />
+
+        <!-- 이미지뷰 -> 나중에 변경 (프로필 추가) -->
+
+        <!-- 펫정보 입력 레이아웃 -->
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="173dp"
+            android:layout_height="154dp"
+            android:layout_gravity="center"
+            android:src="@drawable/exprofile"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.103"
+            tools:ignore="MissingConstraints" />
+
+        <GridLayout
             android:layout_width="match_parent"
-            android:layout_height="500dp" />
+            android:layout_height="match_parent"
+            android:columnCount="1"
+            android:paddingTop="170dp"
+            android:rowCount="5"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="56dp">
 
-        <!-- 버튼 - 등록 -->
-        <Button
-            android:id="@+id/btnRegist"
-            android:layout_width="380dp"
-            android:layout_height="56dp"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="20dp"
-            android:background="@drawable/basicbutton_sky"
-            android:fontFamily="@font/jalnan"
-            android:text="등록"
-            android:textColor="@color/white"
-            android:textSize="30dp"
-            tools:ignore="TextContrastCheck" />
-    </GridLayout>
+            <!-- 공통 펫정보 common_pet_info.xml 처리 -->
+            <include
+                android:id="@+id/petinfo"
+                layout="@layout/common_pet_info"
+                android:layout_width="match_parent"
+                android:layout_height="471dp" />
 
-</FrameLayout>
+            <!-- 뷰 - 일자 선 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_row="0"
+                android:background="#DCDADA"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="-16dp"
+                tools:layout_editor_absoluteY="129dp" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/jalnanotf"
+                android:text="맞춤서비스를 위하여 우리 아이의 정보가 제대로 기록되어"
+                android:textSize="12dp"
+                android:typeface="sans"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/jalnanotf"
+                android:text="있는지 꼭 확인해주세요"
+                android:textSize="12dp"
+                android:typeface="sans"
+                tools:ignore="MissingConstraints" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                tools:ignore="MissingConstraints">
+
+                <!-- Button - 취소 버튼 -->
+                <Button
+                    android:id="@+id/btnCancel"
+                    android:layout_width="180dp"
+                    android:layout_height="60dp"
+                    android:layout_marginRight="5dp"
+                    android:background="#EA5148"
+                    android:fontFamily="@font/jalnan"
+                    android:text="취소"
+                    android:textColor="@color/white"
+                    android:textSize="30dp"
+                    tools:ignore="TextContrastCheck" />
+
+                <!-- Button - 확인 버튼 -->
+                <Button
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="180dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/basicbutton_sky"
+                    android:fontFamily="@font/jalnan"
+                    android:text="확인"
+                    android:textColor="@color/white"
+                    android:textSize="30dp"
+                    tools:ignore="TextContrastCheck" />
+            </LinearLayout>
+        </GridLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
