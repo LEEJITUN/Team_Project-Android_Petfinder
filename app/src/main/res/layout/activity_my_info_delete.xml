@@ -26,18 +26,10 @@
 
     </RelativeLayout>
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-
-
-
-    </RelativeLayout>
 
     <!-- 텍스트뷰 - 탈퇴안내 -->
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="?attr/selectableItemBackground"
@@ -64,7 +56,7 @@
 
     <!-- 텍스트뷰 - 탈퇴안내 문구1 -->
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/jalnanotf"
@@ -78,7 +70,7 @@
 
     <!-- 텍스트뷰 - 탈퇴안내 문구2 -->
     <TextView
-        android:id="@+id/textView_Detail1"
+        android:id="@+id/textView2_Detail1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/jalnanotf"
@@ -88,7 +80,7 @@
         tools:layout_editor_absoluteX="18dp"
         tools:layout_editor_absoluteY="186dp" />
     <TextView
-        android:id="@+id/textView_Detail2"
+        android:id="@+id/textView2_Detail2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/jalnanotf"
@@ -99,7 +91,7 @@
         tools:layout_editor_absoluteX="186dp"
         tools:layout_editor_absoluteY="186dp" />
     <TextView
-        android:id="@+id/textView_Detail3"
+        android:id="@+id/textView2_Detail3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/jalnanotf"
@@ -111,7 +103,7 @@
 
     <!-- 텍스트뷰 - 탈퇴안내 문구3 -->
     <TextView
-        android:id="@+id/textView_Detail5"
+        android:id="@+id/textView3_Detail1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/jalnanotf"
@@ -121,7 +113,7 @@
         tools:layout_editor_absoluteX="20dp"
         tools:layout_editor_absoluteY="202dp" />
     <TextView
-        android:id="@+id/textView_Detail6"
+        android:id="@+id/textView3_Detail2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/jalnanotf"
@@ -132,7 +124,7 @@
         tools:layout_editor_absoluteX="61dp"
         tools:layout_editor_absoluteY="202dp" />
     <TextView
-        android:id="@+id/textView_Detail7"
+        android:id="@+id/textView3_Detail3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/jalnanotf"
@@ -144,7 +136,7 @@
 
     <!-- 텍스트뷰 - 탈퇴안내 문구4 -->
     <TextView
-        android:id="@+id/textView_Detail8"
+        android:id="@+id/textView4_Detail1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/jalnanotf"
@@ -154,7 +146,7 @@
         tools:layout_editor_absoluteX="20dp"
         tools:layout_editor_absoluteY="218dp" />
     <TextView
-        android:id="@+id/textView_Detail9"
+        android:id="@+id/textView4_Detail2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/jalnanotf"
@@ -165,7 +157,7 @@
         tools:layout_editor_absoluteX="81dp"
         tools:layout_editor_absoluteY="218dp" />
     <TextView
-        android:id="@+id/textView_Detail10"
+        android:id="@+id/textView4_Detail3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/jalnanotf"
@@ -177,16 +169,15 @@
 
     <!-- 텍스트뷰 - 탈퇴안내 문구5 -->
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/jalnanotf"
-        android:text="   (게시글, 질문, 답변, 댓글 및 종아요 등)"
+        android:text="(게시글, 질문, 답변, 댓글 및 종아요 등)"
         android:textSize="10dp"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteX="27dp"
         tools:layout_editor_absoluteY="234dp" />
-
 
     <!-- EditText - 비밀번호 확인 -->
     <EditText
