@@ -267,6 +267,7 @@
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/white"
                     android:text=">" />
+
             </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
