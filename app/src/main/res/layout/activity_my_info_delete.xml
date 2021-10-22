@@ -26,7 +26,16 @@
 
     </RelativeLayout>
 
-    <!-- 텍스트뷰 - 탈퇴안내 문구 -->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+
+
+    </RelativeLayout>
+
+    <!-- 텍스트뷰 - 탈퇴안내 -->
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
@@ -53,7 +62,7 @@
         tools:layout_editor_absoluteX="-16dp"
         tools:layout_editor_absoluteY="129dp" />
 
-    <!-- 텍스트뷰 - 탈퇴 안내 문구 -->
+    <!-- 텍스트뷰 - 탈퇴안내 문구1 -->
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -67,81 +76,119 @@
         tools:layout_editor_absoluteX="17dp"
         tools:layout_editor_absoluteY="144dp" />
 
-    <!-- 텍스트뷰 - 비밀번호 변경 안내 문구 -->
+    <!-- 텍스트뷰 - 탈퇴안내 문구2 -->
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textView_Detail1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/jalnanotf"
-        android:text="· 사용하고 계신 아이디는 탈퇴할 경우 재사용 및 복구가 불가능합니다."
+        android:text="· 사용하고 계신 아이디는 탈퇴할 경우 "
         android:textSize="10dp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="18dp"
         tools:layout_editor_absoluteY="186dp" />
-
-    <!-- 텍스트뷰 - 비밀번호 변경 안내 문구 -->
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textView_Detail2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/jalnanotf"
-        android:text="· 이전에 사용한 적 없는 비밀번호"
-        android:textColor="#EA5148"
+        android:text="재사용 및 복구"
+        android:textColor="@color/red"
         android:textSize="10dp"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="18dp"
-        tools:layout_editor_absoluteY="206dp" />
+        tools:layout_editor_absoluteX="186dp"
+        tools:layout_editor_absoluteY="186dp" />
+    <TextView
+        android:id="@+id/textView_Detail3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jalnanotf"
+        android:text="가 불가능합니다."
+        android:textSize="10dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="251dp"
+        tools:layout_editor_absoluteY="186dp" />
 
-    <!-- 텍스트뷰 - 비밀번호 변경 안내 문구 -->
+    <!-- 텍스트뷰 - 탈퇴안내 문구3 -->
+    <TextView
+        android:id="@+id/textView_Detail5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jalnanotf"
+        android:text="· 탈퇴 후 "
+        android:textSize="10dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="202dp" />
+    <TextView
+        android:id="@+id/textView_Detail6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jalnanotf"
+        android:text="회원정보 및 개인형 서비스"
+        android:textColor="@color/red"
+        android:textSize="10dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="61dp"
+        tools:layout_editor_absoluteY="202dp" />
+    <TextView
+        android:id="@+id/textView_Detail7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jalnanotf"
+        android:text="이용기록은 모두 삭제됩니다."
+        android:textSize="10dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="178dp"
+        tools:layout_editor_absoluteY="202dp" />
 
-    <!-- EditText - 현재 비밀번호 입력 -->
+    <!-- 텍스트뷰 - 탈퇴안내 문구4 -->
+    <TextView
+        android:id="@+id/textView_Detail8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jalnanotf"
+        android:text="· 탈퇴 후에도 "
+        android:textSize="10dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="218dp" />
+    <TextView
+        android:id="@+id/textView_Detail9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jalnanotf"
+        android:text="게시판형 서비스"
+        android:textColor="@color/red"
+        android:textSize="10dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="218dp" />
+    <TextView
+        android:id="@+id/textView_Detail10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jalnanotf"
+        android:text="에 등록한 게시물은 그대로 남아 있습니다."
+        android:textSize="10dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="153dp"
+        tools:layout_editor_absoluteY="218dp" />
+
+    <!-- 텍스트뷰 - 탈퇴안내 문구5 -->
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/jalnanotf"
-        android:text="가 안전합니다."
+        android:text="   (게시글, 질문, 답변, 댓글 및 종아요 등)"
         android:textSize="10dp"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="165dp"
-        tools:layout_editor_absoluteY="206dp" />
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="234dp" />
 
-    <EditText
-        android:id="@+id/inputPw"
-        android:layout_width="380dp"
-        android:layout_height="56dp"
-        android:background="@drawable/round"
-        android:ems="10"
-        android:fontFamily="@font/micross"
-        android:hint="  현재 비밀번호"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.374"
-        tools:ignore="SpeakableTextPresentCheck" />
 
-    <!-- EditText - 바꿀 비밀번호 입력 -->
-    <EditText
-        android:id="@+id/inputRePw1"
-        android:layout_width="380dp"
-        android:layout_height="56dp"
-        android:background="@drawable/round"
-        android:ems="10"
-        android:fontFamily="@font/micross"
-        android:hint="   비밀번호(8자리 이상)"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.475"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <!-- EditText - 바꿀 비밀번호 확인 -->
+    <!-- EditText - 비밀번호 확인 -->
     <EditText
         android:id="@+id/inputRePw2"
         android:layout_width="380dp"
@@ -149,7 +196,7 @@
         android:background="@drawable/round"
         android:ems="10"
         android:fontFamily="@font/micross"
-        android:hint="   비밀번호 재확인"
+        android:hint="   비밀번호 확인"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
