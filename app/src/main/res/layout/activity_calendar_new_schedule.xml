@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="600dp"
-    android:background="@color/white"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="wrap_content">
 
     <!-- tool bar -->
     <include
         layout="@layout/toolbar_green"
         android:id="@+id/toolbar"/>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
 
         <Button
             android:id="@+id/btn_Back"
             android:layout_width="35dp"
             android:layout_height="35dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/ic_baseline_keyboard_arrow_left_24"
             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         <TextView
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
             android:layout_height="34dp"
-            android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/jalnanotf"
             android:gravity="center_horizontal"
@@ -33,301 +33,309 @@
             android:textColor="@color/white"
             android:textSize="30dp" />
 
+    </RelativeLayout>
 
-    </LinearLayout>
-
-    <!-- 날짜 -->
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginBottom="250dp">
-        <TextView
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints">
+        <!-- 날짜 -->
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="18dp"
-            android:fontFamily="@font/jalnan"
-            android:text="날짜 "
-            android:textColor="@color/down_gray"
-            android:textSize="18dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent">
-
-            <EditText
-                android:id="@+id/input_Date"
-                android:layout_width="300dp"
-                android:layout_height="56dp"
-                android:layout_marginEnd="18dp"
-                android:background="@drawable/round"
-                android:ems="10"
-                android:fontFamily="@font/micross" />
-        </RelativeLayout>
-    </LinearLayout>
-
-    <!-- 시간 -->
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:layout_marginTop="150dp"
-        android:layout_marginBottom="250dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="18dp"
-            android:fontFamily="@font/jalnan"
-            android:text="시간       "
-            android:textColor="@color/down_gray"
-            android:textSize="18dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent">
+            android:layout_height="60dp"
+            android:layout_marginTop="80dp">
 
             <TextView
-                android:id="@+id/input_Time"
-                android:layout_width="300dp"
-                android:layout_height="56dp"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginEnd="18dp"
-                android:background="@drawable/round"
-                android:ems="10"
-                android:fontFamily="@font/jalnan" />
-            <Button
-                android:id="@+id/btn_Time_Check"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:layout_marginLeft="250dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/ic_baseline_keyboard_arrow_down_24"
-                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                android:fontFamily="@font/jalnan"
+                android:text="날짜 "
+                android:textColor="@color/down_gray"
+                android:textSize="18dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        </RelativeLayout>
-    </LinearLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent">
 
-    <!-- 이벤트 -->
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:layout_marginTop="220dp"
-        android:layout_marginBottom="250dp">
-
-        <TextView
+                <EditText
+                    android:id="@+id/input_Date"
+                    android:layout_width="300dp"
+                    android:layout_height="56dp"
+                    android:layout_marginEnd="18dp"
+                    android:background="@drawable/round"
+                    android:ems="10"
+                    android:fontFamily="@font/micross" />
+            </RelativeLayout>
+        </LinearLayout>
+        <!-- 시간 -->
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="18dp"
-            android:fontFamily="@font/jalnan"
-            android:text="이벤트   "
-            android:textColor="@color/down_gray"
-            android:textSize="18dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent">
+            android:layout_height="60dp"
+            android:layout_marginTop="150dp"
+            android:layout_marginBottom="250dp">
 
             <TextView
-                android:id="@+id/input_Event"
-                android:layout_width="300dp"
-                android:layout_height="56dp"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginEnd="18dp"
-                android:background="@drawable/round"
-                android:ems="10"
-                android:fontFamily="@font/micross" />
-            <Button
-                android:id="@+id/btn_Event_Check"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:layout_marginLeft="250dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/ic_baseline_keyboard_arrow_down_24"
-                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                android:fontFamily="@font/jalnan"
+                android:text="시간       "
+                android:textColor="@color/down_gray"
+                android:textSize="18dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        </RelativeLayout>
-    </LinearLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent">
 
-    <!-- 대상 -->
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:layout_marginTop="290dp"
-        android:layout_marginBottom="250dp">
+                <TextView
+                    android:id="@+id/input_Time"
+                    android:layout_width="300dp"
+                    android:layout_height="56dp"
+                    android:layout_marginEnd="18dp"
+                    android:background="@drawable/round"
+                    android:ems="10"
+                    android:fontFamily="@font/jalnan" />
 
-        <TextView
+                <Button
+                    android:id="@+id/btn_Time_Check"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="250dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ic_baseline_keyboard_arrow_down_24"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!-- 이벤트 -->
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="18dp"
-            android:fontFamily="@font/jalnan"
-            android:text="대상       "
-            android:textColor="@color/down_gray"
-            android:textSize="18dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent">
+            android:layout_height="60dp"
+            android:layout_marginTop="220dp"
+            android:layout_marginBottom="250dp">
 
             <TextView
-                android:id="@+id/input_Pet"
-                android:layout_width="300dp"
-                android:layout_height="56dp"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginEnd="18dp"
-                android:background="@drawable/round"
-                android:ems="10"
-                android:fontFamily="@font/micross" />
+                android:fontFamily="@font/jalnan"
+                android:text="이벤트   "
+                android:textColor="@color/down_gray"
+                android:textSize="18dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
-                android:id="@+id/btn_Pet_Check"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:layout_marginLeft="250dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/ic_baseline_keyboard_arrow_down_24"
-                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent">
 
-        </RelativeLayout>
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/input_Event"
+                    android:layout_width="300dp"
+                    android:layout_height="56dp"
+                    android:layout_marginEnd="18dp"
+                    android:background="@drawable/round"
+                    android:ems="10"
+                    android:fontFamily="@font/micross" />
 
-    <!-- 메모 -->
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:layout_marginTop="360dp"
-        android:layout_marginBottom="250dp">
+                <Button
+                    android:id="@+id/btn_Event_Check"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="250dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ic_baseline_keyboard_arrow_down_24"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
-        <TextView
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!-- 대상 -->
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="18dp"
-            android:fontFamily="@font/jalnan"
-            android:text="메모       "
-            android:textColor="@color/down_gray"
-            android:textSize="18dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent">
-
-            <EditText
-                android:id="@+id/input_Memo"
-                android:layout_width="300dp"
-                android:layout_height="56dp"
-                android:layout_marginEnd="18dp"
-                android:background="@drawable/round"
-                android:ems="10"
-                android:fontFamily="@font/micross"
-                tools:ignore="SpeakableTextPresentCheck" />
-
-        </RelativeLayout>
-    </LinearLayout>
-
-    <!-- 알람(예정) -->
- <!--   <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:layout_marginTop="430dp"
-        android:layout_marginBottom="250dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="18dp"
-            android:fontFamily="@font/jalnan"
-            android:text="알람       "
-            android:textColor="@color/down_gray"
-            android:textSize="18dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent">
+            android:layout_height="60dp"
+            android:layout_marginTop="290dp"
+            android:layout_marginBottom="250dp">
 
             <TextView
-                android:id="@+id/inputPetWeight"
-                android:layout_width="300dp"
-                android:layout_height="56dp"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginEnd="18dp"
-                android:background="@drawable/round"
-                android:ems="10"
-                android:fontFamily="@font/micross" />
+                android:fontFamily="@font/jalnan"
+                android:text="대상       "
+                android:textColor="@color/down_gray"
+                android:textSize="18dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/input_Pet"
+                    android:layout_width="300dp"
+                    android:layout_height="56dp"
+                    android:layout_marginEnd="18dp"
+                    android:background="@drawable/round"
+                    android:ems="10"
+                    android:fontFamily="@font/micross" />
+
+                <Button
+                    android:id="@+id/btn_Pet_Check"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="250dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ic_baseline_keyboard_arrow_down_24"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!-- 메모 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginTop="360dp"
+            android:layout_marginBottom="250dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="18dp"
+                android:fontFamily="@font/jalnan"
+                android:text="메모       "
+                android:textColor="@color/down_gray"
+                android:textSize="18dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <EditText
+                    android:id="@+id/input_Memo"
+                    android:layout_width="300dp"
+                    android:layout_height="56dp"
+                    android:layout_marginEnd="18dp"
+                    android:background="@drawable/round"
+                    android:ems="10"
+                    android:fontFamily="@font/micross"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!-- 알람(예정) -->
+        <!--   <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="60dp"
+               android:layout_marginTop="430dp"
+               android:layout_marginBottom="250dp">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="30dp"
+                   android:layout_marginStart="16dp"
+                   android:layout_marginTop="15dp"
+                   android:layout_marginEnd="18dp"
+                   android:fontFamily="@font/jalnan"
+                   android:text="알람       "
+                   android:textColor="@color/down_gray"
+                   android:textSize="18dp"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent" />
+
+               <RelativeLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintHorizontal_bias="1.0"
+                   app:layout_constraintStart_toStartOf="parent">
+
+                   <TextView
+                       android:id="@+id/inputPetWeight"
+                       android:layout_width="300dp"
+                       android:layout_height="56dp"
+                       android:layout_marginEnd="18dp"
+                       android:background="@drawable/round"
+                       android:ems="10"
+                       android:fontFamily="@font/micross" />
+                   <Button
+                       android:id="@+id/btn_more_navi_weight"
+                       android:layout_width="35dp"
+                       android:layout_height="35dp"
+                       android:layout_marginLeft="250dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/ic_baseline_keyboard_arrow_right_24"
+                       tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+               </RelativeLayout>
+           </LinearLayout>-->
+
+        <!-- 등록하기 버튼 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginTop="600dp"
+            android:layout_marginBottom="250dp">
+
+
+            <!-- Button - 확인 버튼 -->
             <Button
-                android:id="@+id/btn_more_navi_weight"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:layout_marginLeft="250dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/ic_baseline_keyboard_arrow_right_24"
-                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                android:id="@+id/btn_Submit"
+                android:layout_width="378dp"
+                android:layout_height="56dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/basicbutton_green"
+                android:fontFamily="@font/jalnan"
+                android:text="등록하기"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                tools:ignore="TextContrastCheck" />
 
-        </RelativeLayout>
-    </LinearLayout>-->
+        </LinearLayout>
 
-    <!-- 등록하기 버튼 -->
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:layout_marginTop="520dp"
-        android:layout_marginBottom="250dp">
+    </RelativeLayout>
 
-
-        <!-- Button - 확인 버튼 -->
-        <Button
-            android:id="@+id/btn_Submit"
-            android:layout_width="378dp"
-            android:layout_height="56dp"
-            android:layout_marginLeft="15dp"
-            android:background="@drawable/basicbutton_green"
-            android:fontFamily="@font/jalnan"
-            android:text="등록하기"
-            android:textColor="@color/white"
-            android:textSize="30dp"
-            tools:ignore="TextContrastCheck" />
-
-    </LinearLayout>
-
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,12 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="650dp"
+    android:layout_height="wrap_content"
     android:background="@color/white">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <!-- tool bar -->
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_green" />
 
         <!-- tool bar -->
         <include
@@ -75,7 +80,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="380dp"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/button_round"
+                android:background="@drawable/button_round_green"
                 android:fontFamily="@font/jalnanotf"
                 android:text="+일정등록"
                 android:textColor="@color/white" />
@@ -88,7 +93,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="420dp">
-
 <!--            <TextView
                 android:id="@+id/btn_list1"
                 android:layout_width="match_parent"
@@ -105,11 +109,12 @@
             <ListView
                 android:id="@+id/listView"
                 android:layout_width="match_parent"
-                android:layout_height="225dp"
+                android:layout_height="wrap_content"
                 android:background="@color/gray"
                 android:fontFamily="@font/jalnanotf"
                 tools:ignore="InvalidId" />
 
         </LinearLayout>
+
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
