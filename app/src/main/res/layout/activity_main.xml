@@ -218,10 +218,10 @@
             android:layout_marginTop="30dp"
             android:layout_marginEnd="15dp"
             android:layout_marginBottom="324dp"
-            android:background="#24000000"
             android:fontFamily="@font/jalnanotf"
             android:text="더보기 +"
-            android:textColor="@color/down_black"
+            android:background="@drawable/button_round_orange"
+            android:textColor="@color/white"
             android:textSize="16dp"
             tools:ignore="TouchTargetSizeCheck" />
 
