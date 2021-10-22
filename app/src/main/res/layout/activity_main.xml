@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".MainActivity">
+    tools:context=".fragment.MainFragment">
 
 
     <!-- tool bar -->
@@ -28,7 +28,7 @@
     <!-- 텍스트뷰 - PetFinder -->
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginBottom="450dp"
         android:background="?attr/selectableItemBackground"
         android:fontFamily="@font/jalnanotf"
@@ -47,30 +47,30 @@
     <RelativeLayout
         android:layout_width="344dp"
         android:layout_height="210dp"
-        android:layout_marginBottom="428dp"
+        android:layout_marginBottom="250dp"
         android:background="@drawable/mainbox_white"
         android:elevation="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
         <!-- 이미지뷰 -> 나중에 변경 (프로필 추가) -->
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginTop="15dp"
             android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
             android:src="@drawable/exprofile" />
 
         <!-- 텍스트 뷰 - 반려동물 이름 -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_marginTop="30dp"
             android:layout_marginLeft="140dp"
-            android:text="시니"
+            android:layout_marginTop="30dp"
             android:fontFamily="@font/jalnan"
+            android:text="시니"
             android:textColor="@color/down_black"
             android:textSize="30dp" />
 
@@ -78,10 +78,10 @@
         <TextView
             android:layout_width="50dp"
             android:layout_height="20dp"
-            android:layout_marginTop="80dp"
             android:layout_marginLeft="140dp"
-            android:text="품종"
+            android:layout_marginTop="80dp"
             android:fontFamily="@font/jalnan"
+            android:text="품종"
             android:textColor="@color/down_gray"
             android:textSize="15dp" />
 
@@ -89,10 +89,10 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="20dp"
-            android:layout_marginTop="80dp"
             android:layout_marginLeft="210dp"
-            android:text="포메라니안"
+            android:layout_marginTop="80dp"
             android:fontFamily="@font/jalnan"
+            android:text="포메라니안"
             android:textColor="@color/yello"
             android:textSize="15dp" />
 
@@ -100,10 +100,10 @@
         <TextView
             android:layout_width="50dp"
             android:layout_height="20dp"
-            android:layout_marginTop="105dp"
             android:layout_marginLeft="140dp"
-            android:text="나이"
+            android:layout_marginTop="105dp"
             android:fontFamily="@font/jalnan"
+            android:text="나이"
             android:textColor="@color/down_gray"
             android:textSize="15dp" />
 
@@ -111,10 +111,10 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="20dp"
-            android:layout_marginTop="105dp"
             android:layout_marginLeft="210dp"
-            android:text="6살"
+            android:layout_marginTop="105dp"
             android:fontFamily="@font/jalnan"
+            android:text="6살"
             android:textColor="@color/down_black"
             android:textSize="15dp" />
 
@@ -122,10 +122,10 @@
         <TextView
             android:layout_width="60dp"
             android:layout_height="20dp"
-            android:layout_marginTop="130dp"
             android:layout_marginLeft="140dp"
-            android:text="함께한지"
+            android:layout_marginTop="130dp"
             android:fontFamily="@font/jalnan"
+            android:text="함께한지"
             android:textColor="@color/down_gray"
             android:textSize="15dp" />
 
@@ -133,10 +133,10 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="20dp"
-            android:layout_marginTop="130dp"
             android:layout_marginLeft="210dp"
-            android:text="2550일"
+            android:layout_marginTop="130dp"
             android:fontFamily="@font/jalnan"
+            android:text="2550일"
             android:textColor="@color/down_black"
             android:textSize="15dp" />
 
@@ -174,7 +174,15 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginTop="400dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.038"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.175"
+        >
 
         <ImageView
             android:layout_width="30dp"
@@ -182,26 +190,13 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginStart="13dp"
-            android:layout_marginTop="365dp"
-            android:src="@drawable/petfoot_yellow" />
-
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginStart="16dp"-->
-<!--            android:layout_marginTop="390dp"-->
-<!--            tools:text="핀더톡"-->
-<!--            android:fontFamily="@font/jalnan"-->
-<!--            android:textColor="@color/down_black"-->
-<!--            android:textSize="35dp"-->
-<!--            android:textStyle="normal"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent" />-->
+            android:src="@drawable/petfoot_yellow"
+            />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="390dp"
+            android:layout_marginTop="30dp"
             android:layout_marginLeft="10dp"
             android:background="?attr/selectableItemBackground"
             android:fontFamily="@font/jalnanotf"
@@ -220,7 +215,7 @@
             android:layout_width="100dp"
             android:layout_height="40dp"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="15dp"
             android:layout_marginBottom="324dp"
             android:background="#24000000"
@@ -239,7 +234,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:layout_marginTop="450dp">
+                android:layout_marginTop="100dp">
 
                 <ImageView
                     android:layout_width="180dp"

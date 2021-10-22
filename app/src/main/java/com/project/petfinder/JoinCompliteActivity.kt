@@ -15,7 +15,7 @@ class JoinCompliteActivity : AppCompatActivity() {
 
         // 메인 화면으로 이동 ( MainActivity )
         btnRevercode.setOnClickListener(View.OnClickListener {
-            val intent = Intent(applicationContext, MainActivity::class.java)
+            val intent = Intent(applicationContext, CommonNavActivity::class.java)
             startActivity(intent)
         })
     }

@@ -19,9 +19,6 @@
             android:name=".Pet_info_Modify_Activity"
             android:exported="false" />
         <activity
-            android:name=".Calendar_Activity"
-            android:exported="false" />
-        <activity
             android:name=".Calendar_New_Schedule_Activity"
             android:exported="false" />
         <activity
@@ -38,9 +35,6 @@
             android:exported="false" />
         <activity
             android:name=".Join_UserInfo_Activity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".Findertalk_faindertalktalk"

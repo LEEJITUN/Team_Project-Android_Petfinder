@@ -20,7 +20,8 @@ class LoginActivity : AppCompatActivity() {
         val inputId : EditText = findViewById(R.id.inputId)
         val inputPw : EditText = findViewById(R.id.inputPw)
         val btnJoin : TextView = findViewById(R.id.btnJoin)
-
+        val btnLogin : TextView = findViewById(R.id.btnLogin)
+        
         //엔터키 
         inputId.setOnKeyListener(View.OnKeyListener { v, keyCode, event -> if (keyCode == KEYCODE_ENTER) true else false })
         inputPw.setOnKeyListener(View.OnKeyListener { v, keyCode, event -> if (keyCode == KEYCODE_ENTER) true else false })
@@ -30,6 +31,11 @@ class LoginActivity : AppCompatActivity() {
             val intent = Intent(applicationContext, Join_PhoneNumber_Activity::class.java)
             startActivity(intent)
         })
-
+        
+        // 로그인 시 메인화면 넘기기
+        btnLogin.setOnClickListener(View.OnClickListener {
+            val intent = Intent(applicationContext, CommonNavActivity::class.java)
+            startActivity(intent)
+        })
     }
 }
