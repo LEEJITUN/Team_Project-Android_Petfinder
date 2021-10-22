@@ -270,7 +270,6 @@
                android:layout_height="60dp"
                android:layout_marginTop="430dp"
                android:layout_marginBottom="250dp">
-
                <TextView
                    android:layout_width="wrap_content"
                    android:layout_height="30dp"
@@ -283,7 +282,6 @@
                    android:textSize="18dp"
                    app:layout_constraintStart_toStartOf="parent"
                    app:layout_constraintTop_toTopOf="parent" />
-
                <RelativeLayout
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
@@ -291,7 +289,6 @@
                    app:layout_constraintEnd_toEndOf="parent"
                    app:layout_constraintHorizontal_bias="1.0"
                    app:layout_constraintStart_toStartOf="parent">
-
                    <TextView
                        android:id="@+id/inputPetWeight"
                        android:layout_width="300dp"
@@ -308,7 +305,6 @@
                        android:layout_marginTop="10dp"
                        android:background="@drawable/ic_baseline_keyboard_arrow_right_24"
                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
                </RelativeLayout>
            </LinearLayout>-->
 

@@ -11,6 +11,21 @@
         android:id="@+id/toolbar"
         layout="@layout/toolbar_sky" />
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <Button
+            android:id="@+id/btn_Back"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_baseline_keyboard_arrow_left_24"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    </RelativeLayout>
+
     <!-- 텍스트뷰 - 비밀번호 변경 문구 -->
     <TextView
         android:id="@+id/textView1"
