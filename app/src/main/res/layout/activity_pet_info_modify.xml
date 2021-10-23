@@ -60,7 +60,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:columnCount="1"
-            android:paddingTop="170dp"
+            android:paddingTop="230dp"
             android:rowCount="5"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="0dp"
@@ -71,7 +71,7 @@
                 android:id="@+id/petinfo"
                 layout="@layout/common_pet_info"
                 android:layout_width="match_parent"
-                android:layout_height="471dp" />
+                android:layout_height="540dp" />
 
             <!-- 뷰 - 일자 선 -->
             <View
