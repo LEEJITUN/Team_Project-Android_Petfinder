@@ -50,3 +50,4 @@ class Findertalk_MyRecyclerViewAdapter : RecyclerView.Adapter<RecyclerView.ViewH
         cardViewItemDTOs.add(CardViewItemDTO(R.drawable.tory3, "세번째", "사진3"))
     }
 }
+//this file is connected to Findertalk_BoardMain_Activity

@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
-
+    <!-- This xml is connected to activity_findertalk_findmypet-->
     <androidx.cardview.widget.CardView
         android:layout_margin="5dp"
         card_view:cardElevation="5dp"

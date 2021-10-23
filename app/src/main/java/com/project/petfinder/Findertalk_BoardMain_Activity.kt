@@ -15,3 +15,4 @@ class Findertalk_BoardMain_Activity :  AppCompatActivity() {
         view.adapter = Findertalk_MyRecyclerViewAdapter()
     }
 }
+//CardViewItemDTO.kt, Findertalk_MyRecyclerViewAdapter.kt is connected to this file.
