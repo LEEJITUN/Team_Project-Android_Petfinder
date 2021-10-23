@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".My_Diary_View_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".My_Diary_Write_Activity"
+            android:exported="false" />
+        <activity
             android:name=".My_info_Delete"
             android:exported="false" />
         <activity
@@ -47,7 +53,7 @@
             android:exported="false" /> <!-- first layout -->
         <activity
             android:name=".Findertalk_BoardMain_Activity"
-            android:exported="false" /><!-- cardview and Recyclerview-->
+            android:exported="false" /> <!-- cardview and Recyclerview -->
         <activity
             android:name=".LoginActivity"
             android:exported="true">
