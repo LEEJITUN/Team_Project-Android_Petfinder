@@ -23,215 +23,284 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/ic_baseline_keyboard_arrow_left_24"
             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/jalnanotf"
+            android:gravity="center_horizontal"
+            android:text="내정보"
+            android:textColor="@color/white"
+            android:textSize="30dp" />
 
     </RelativeLayout>
 
-
     <!-- 텍스트뷰 - 탈퇴안내 -->
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="?attr/selectableItemBackground"
-        android:fontFamily="@font/jalnanotf"
-        android:lineSpacingExtra="4sp"
-        android:text="탈퇴 안내"
-        android:textColor="@color/down_black"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.072"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.108" />
-
-    <!-- 뷰 - 일자 선 -->
-    <View
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#DCDADA"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-16dp"
-        tools:layout_editor_absoluteY="129dp" />
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
 
-    <!-- 텍스트뷰 - 탈퇴안내 문구1 -->
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/jalnanotf"
-        android:text="회원탈퇴를 신청하기 전에 안내 사항을 꼭 확인해주세요."
-        android:textColor="@color/sky_sumin"
-        android:textSize="13dp"
-        android:typeface="sans"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="144dp" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="75dp"
+            android:background="?attr/selectableItemBackground"
+            android:fontFamily="@font/jalnanotf"
+            android:lineSpacingExtra="4sp"
+            android:text="탈퇴 안내"
+            android:textColor="@color/down_black"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.072"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.108" />
 
-    <!-- 텍스트뷰 - 탈퇴안내 문구2 -->
-    <TextView
-        android:id="@+id/textView2_Detail1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/jalnanotf"
-        android:text="· 사용하고 계신 아이디는 탈퇴할 경우 "
-        android:textSize="10dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="18dp"
-        tools:layout_editor_absoluteY="186dp" />
-    <TextView
-        android:id="@+id/textView2_Detail2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/jalnanotf"
-        android:text="재사용 및 복구"
-        android:textColor="@color/red"
-        android:textSize="10dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="186dp"
-        tools:layout_editor_absoluteY="186dp" />
-    <TextView
-        android:id="@+id/textView2_Detail3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/jalnanotf"
-        android:text="가 불가능합니다."
-        android:textSize="10dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="251dp"
-        tools:layout_editor_absoluteY="186dp" />
 
-    <!-- 텍스트뷰 - 탈퇴안내 문구3 -->
-    <TextView
-        android:id="@+id/textView3_Detail1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/jalnanotf"
-        android:text="· 탈퇴 후 "
-        android:textSize="10dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="202dp" />
-    <TextView
-        android:id="@+id/textView3_Detail2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/jalnanotf"
-        android:text="회원정보 및 개인형 서비스"
-        android:textColor="@color/red"
-        android:textSize="10dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="61dp"
-        tools:layout_editor_absoluteY="202dp" />
-    <TextView
-        android:id="@+id/textView3_Detail3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/jalnanotf"
-        android:text="이용기록은 모두 삭제됩니다."
-        android:textSize="10dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="178dp"
-        tools:layout_editor_absoluteY="202dp" />
+        <!-- 뷰 - 일자 선 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="125dp"
+            android:background="#DCDADA"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="-16dp"
+            tools:layout_editor_absoluteY="129dp" />
 
-    <!-- 텍스트뷰 - 탈퇴안내 문구4 -->
-    <TextView
-        android:id="@+id/textView4_Detail1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/jalnanotf"
-        android:text="· 탈퇴 후에도 "
-        android:textSize="10dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="218dp" />
-    <TextView
-        android:id="@+id/textView4_Detail2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/jalnanotf"
-        android:text="게시판형 서비스"
-        android:textColor="@color/red"
-        android:textSize="10dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="81dp"
-        tools:layout_editor_absoluteY="218dp" />
-    <TextView
-        android:id="@+id/textView4_Detail3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/jalnanotf"
-        android:text="에 등록한 게시물은 그대로 남아 있습니다."
-        android:textSize="10dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="153dp"
-        tools:layout_editor_absoluteY="218dp" />
+        <!-- 텍스트뷰 - 탈퇴안내 문구1 -->
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="150dp"
+            android:fontFamily="@font/jalnanotf"
+            android:text="회원탈퇴를 신청하기 전에 안내 사항을 꼭 확인해주세요."
+            android:textColor="@color/sky_sumin"
+            android:textSize="14dp"
+            android:typeface="sans"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="17dp"
+            tools:layout_editor_absoluteY="144dp" />
 
-    <!-- 텍스트뷰 - 탈퇴안내 문구5 -->
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/jalnanotf"
-        android:text="(게시글, 질문, 답변, 댓글 및 종아요 등)"
-        android:textSize="10dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="234dp" />
+        <!-- 텍스트뷰 - 탈퇴안내 문구2 -->
+        <TextView
+            android:id="@+id/textView2_Detail1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="190dp"
+            android:fontFamily="@font/jalnanotf"
+            android:text="· 사용하고 계신 아이디는 탈퇴할 경우 "
+            android:textSize="10dp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="18dp"
+            tools:layout_editor_absoluteY="186dp" />
 
-    <!-- EditText - 비밀번호 확인 -->
-    <EditText
-        android:id="@+id/inputRePw2"
-        android:layout_width="380dp"
-        android:layout_height="56dp"
-        android:background="@drawable/round"
-        android:ems="10"
-        android:fontFamily="@font/micross"
-        android:hint="   비밀번호 확인"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.574"
-        tools:ignore="SpeakableTextPresentCheck" />
+        <TextView
+            android:id="@+id/textView2_Detail2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="189dp"
+            android:layout_marginTop="190dp"
+            android:fontFamily="@font/jalnanotf"
+            android:text="재사용 및 복구"
+            android:textColor="@color/red"
+            android:textSize="10dp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="186dp"
+            tools:layout_editor_absoluteY="186dp" />
 
-    <!-- Button - 취소 버튼 -->
-    <Button
-        android:id="@+id/btnCancel"
-        android:layout_width="181dp"
-        android:layout_height="61dp"
-        android:background="#EA5148"
-        android:fontFamily="@font/jalnan"
-        android:text="취소"
-        android:textColor="@color/white"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.078"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.702"
-        tools:ignore="TextContrastCheck" />
+        <TextView
+            android:id="@+id/textView2_Detail3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="255dp"
+            android:layout_marginTop="190dp"
+            android:fontFamily="@font/jalnanotf"
+            android:text="가 불가능합니다."
+            android:textSize="10dp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="251dp"
+            tools:layout_editor_absoluteY="186dp" />
 
-    <!-- Button - 확인 버튼 -->
-    <Button
-        android:id="@+id/btnSubmit"
-        android:layout_width="181dp"
-        android:layout_height="61dp"
-        android:background="@drawable/basicbutton_sky"
-        android:fontFamily="@font/jalnan"
-        android:text="확인"
-        android:textColor="@color/white"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.929"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.703"
-        tools:ignore="TextContrastCheck" />
+        <!-- 텍스트뷰 - 탈퇴안내 문구3 -->
+        <TextView
+            android:id="@+id/textView3_Detail1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="210dp"
+            android:fontFamily="@font/jalnanotf"
+            android:text="· 탈퇴 후 "
+            android:textSize="10dp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="20dp"
+            tools:layout_editor_absoluteY="202dp" />
+
+        <TextView
+            android:id="@+id/textView3_Detail2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="62dp"
+            android:layout_marginTop="210dp"
+            android:fontFamily="@font/jalnanotf"
+            android:text="회원정보 및 개인형 서비스"
+            android:textColor="@color/red"
+            android:textSize="10dp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="61dp"
+            tools:layout_editor_absoluteY="202dp" />
+
+        <TextView
+            android:id="@+id/textView3_Detail3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="181dp"
+            android:layout_marginTop="210dp"
+            android:fontFamily="@font/jalnanotf"
+            android:text="이용기록은 모두 삭제됩니다."
+            android:textSize="10dp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="178dp"
+            tools:layout_editor_absoluteY="202dp" />
+
+        <!-- 텍스트뷰 - 탈퇴안내 문구4 -->
+        <TextView
+            android:id="@+id/textView4_Detail1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="230dp"
+            android:fontFamily="@font/jalnanotf"
+            android:text="· 탈퇴 후에도 "
+            android:textSize="10dp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="20dp"
+            tools:layout_editor_absoluteY="218dp" />
+
+        <TextView
+            android:id="@+id/textView4_Detail2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="81dp"
+            android:layout_marginTop="230dp"
+            android:fontFamily="@font/jalnanotf"
+            android:text="게시판형 서비스"
+            android:textColor="@color/red"
+            android:textSize="10dp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="81dp"
+            tools:layout_editor_absoluteY="218dp" />
+
+        <TextView
+            android:id="@+id/textView4_Detail3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="154dp"
+            android:layout_marginTop="230dp"
+            android:fontFamily="@font/jalnanotf"
+            android:text="에 등록한 게시물은 그대로 남아 있습니다."
+            android:textSize="10dp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="153dp"
+            tools:layout_editor_absoluteY="218dp" />
+
+        <!-- 텍스트뷰 - 탈퇴안내 문구5 -->
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="250dp"
+            android:fontFamily="@font/jalnanotf"
+            android:text="(게시글, 질문, 답변, 댓글 및 종아요 등)"
+            android:textSize="10dp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="27dp"
+            tools:layout_editor_absoluteY="234dp" />
+
+        <!-- 확인 체크박스 -->
+
+        <!-- EditText - 비밀번호 확인 -->
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="350dp"
+            android:fontFamily="@font/jalnanotf"
+            android:text="안내 사항을 모두 확인하였으며, 이에 동의합니다."
+            android:textSize="13dp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="18dp"
+            tools:layout_editor_absoluteY="339dp" />
+
+        <EditText
+            android:id="@+id/inputRePw2"
+            android:layout_width="380dp"
+            android:layout_height="56dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="400dp"
+            android:background="@drawable/round"
+            android:ems="10"
+            android:fontFamily="@font/micross"
+            android:hint="   비밀번호 확인"
+            android:inputType="textPassword"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.574"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <!-- Button - 취소 버튼 -->
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="181dp"
+            android:layout_height="61dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="490dp"
+            android:background="#EA5148"
+            android:fontFamily="@font/jalnan"
+            android:text="취소"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.078"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.702"
+            tools:ignore="TextContrastCheck" />
+
+        <!-- Button - 확인 버튼 -->
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="181dp"
+            android:layout_height="61dp"
+            android:layout_marginLeft="212dp"
+            android:layout_marginTop="490dp"
+            android:background="@drawable/basicbutton_sky"
+            android:fontFamily="@font/jalnan"
+            android:text="확인"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.929"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.703"
+            tools:ignore="TextContrastCheck" />
+
+    </RelativeLayout>
+
 
 
 

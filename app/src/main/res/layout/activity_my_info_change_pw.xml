@@ -23,190 +23,227 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/ic_baseline_keyboard_arrow_left_24"
             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/jalnanotf"
+            android:gravity="center_horizontal"
+            android:text="내정보"
+            android:textColor="@color/white"
+            android:textSize="30dp" />
 
     </RelativeLayout>
 
-    <!-- 텍스트뷰 - 비밀번호 변경 문구 -->
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="?attr/selectableItemBackground"
-        android:fontFamily="@font/jalnanotf"
-        android:lineSpacingExtra="4sp"
-        android:text="비밀번호 변경"
-        android:textColor="@color/down_black"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.072"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.108" />
-
-    <!-- 뷰 - 일자 선 -->
-    <View
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#DCDADA"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-16dp"
-        tools:layout_editor_absoluteY="129dp" />
-
-    <!-- 텍스트뷰 - 비밀번호 변경 안내 문구 -->
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/jalnanotf"
-        android:text="안전한 비밀번호로 내정보를 보호"
-        android:textColor="@color/sky_sumin"
-        android:textSize="15dp"
-        android:typeface="sans"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="144dp" />
+        tools:ignore="MissingConstraints">
 
-    <!-- 텍스트뷰 - 비밀번호 변경 안내 문구 -->
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/jalnanotf"
-        android:text="하세요"
-        android:textSize="15dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="238dp"
-        tools:layout_editor_absoluteY="144dp" />
+        <!-- 텍스트뷰 - 비밀번호 변경 문구 -->
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="75dp"
+            android:background="?attr/selectableItemBackground"
+            android:fontFamily="@font/jalnanotf"
+            android:lineSpacingExtra="4sp"
+            android:text="비밀번호 변경"
+            android:textColor="@color/down_black"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.072"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.108" />
 
-    <!-- 텍스트뷰 - 비밀번호 변경 안내 문구 -->
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/jalnanotf"
-        android:text="· 다른 아이디/사이트에서 사용한 적 없는 비밀번호"
-        android:textColor="#EA5148"
-        android:textSize="12dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="18dp"
-        tools:layout_editor_absoluteY="186dp" />
+        <!-- 뷰 - 일자 선 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="125dp"
+            android:background="#DCDADA"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="-16dp"
+            tools:layout_editor_absoluteY="129dp" />
 
-    <!-- 텍스트뷰 - 비밀번호 변경 안내 문구 -->
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/jalnanotf"
-        android:text="· 이전에 사용한 적 없는 비밀번호"
-        android:textColor="#EA5148"
-        android:textSize="12dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="18dp"
-        tools:layout_editor_absoluteY="206dp" />
+        <!-- 텍스트뷰 - 비밀번호 변경 안내 문구 -->
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="150dp"
+            android:fontFamily="@font/jalnanotf"
+            android:text="안전한 비밀번호로 내정보를 보호"
+            android:textColor="@color/sky_sumin"
+            android:textSize="15dp"
+            android:typeface="sans"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="17dp"
+            tools:layout_editor_absoluteY="144dp" />
 
-    <!-- 텍스트뷰 - 비밀번호 변경 안내 문구 -->
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/jalnanotf"
-        android:text="가 안전합니다."
-        android:textSize="12dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="197dp"
-        tools:layout_editor_absoluteY="206dp" />
+        <!-- 텍스트뷰 - 비밀번호 변경 안내 문구 -->
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="242dp"
+            android:layout_marginTop="150dp"
+            android:fontFamily="@font/jalnanotf"
+            android:text="하세요"
+            android:textSize="15dp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="238dp"
+            tools:layout_editor_absoluteY="144dp" />
 
-    <!-- EditText - 현재 비밀번호 입력 -->
-    <EditText
-        android:id="@+id/inputPw"
-        android:layout_width="380dp"
-        android:layout_height="56dp"
-        android:background="@drawable/round"
-        android:ems="10"
-        android:fontFamily="@font/micross"
-        android:hint="  현재 비밀번호"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.374"
-        tools:ignore="SpeakableTextPresentCheck" />
+        <!-- 텍스트뷰 - 비밀번호 변경 안내 문구 -->
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="190dp"
+            android:fontFamily="@font/jalnanotf"
+            android:text="· 다른 아이디/사이트에서 사용한 적 없는 비밀번호"
+            android:textColor="#EA5148"
+            android:textSize="12dp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="18dp"
+            tools:layout_editor_absoluteY="186dp" />
 
-    <!-- EditText - 바꿀 비밀번호 입력 -->
-    <EditText
-        android:id="@+id/inputRePw1"
-        android:layout_width="380dp"
-        android:layout_height="56dp"
-        android:background="@drawable/round"
-        android:ems="10"
-        android:fontFamily="@font/micross"
-        android:hint="   비밀번호(8자리 이상)"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.475"
-        tools:ignore="SpeakableTextPresentCheck" />
+        <!-- 텍스트뷰 - 비밀번호 변경 안내 문구 -->
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="210dp"
+            android:fontFamily="@font/jalnanotf"
+            android:text="· 이전에 사용한 적 없는 비밀번호"
+            android:textColor="#EA5148"
+            android:textSize="12dp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="18dp"
+            tools:layout_editor_absoluteY="206dp" />
 
-    <!-- EditText - 바꿀 비밀번호 확인 -->
-    <EditText
-        android:id="@+id/inputRePw2"
-        android:layout_width="380dp"
-        android:layout_height="56dp"
-        android:background="@drawable/round"
-        android:ems="10"
-        android:fontFamily="@font/micross"
-        android:hint="   비밀번호 재확인"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.574"
-        tools:ignore="SpeakableTextPresentCheck" />
+        <!-- 텍스트뷰 - 비밀번호 변경 안내 문구 -->
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="210dp"
+            android:fontFamily="@font/jalnanotf"
+            android:text="가 안전합니다."
+            android:textSize="12dp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="197dp"
+            tools:layout_editor_absoluteY="206dp" />
 
-    <!-- Button - 취소 버튼 -->
-    <Button
-        android:id="@+id/btnCancel"
-        android:layout_width="181dp"
-        android:layout_height="61dp"
-        android:background="#EA5148"
-        android:fontFamily="@font/jalnan"
-        android:text="취소"
-        android:textColor="@color/white"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.078"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.702"
-        tools:ignore="TextContrastCheck" />
+        <!-- EditText - 현재 비밀번호 입력 -->
+        <EditText
+            android:id="@+id/inputPw"
+            android:layout_width="380dp"
+            android:layout_height="56dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="260dp"
+            android:background="@drawable/round"
+            android:ems="10"
+            android:fontFamily="@font/micross"
+            android:hint="  현재 비밀번호"
+            android:inputType="textPassword"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.374"
+            tools:ignore="SpeakableTextPresentCheck" />
 
-    <!-- Button - 확인 버튼 -->
-    <Button
-        android:id="@+id/btnSubmit"
-        android:layout_width="181dp"
-        android:layout_height="61dp"
-        android:background="@drawable/basicbutton_sky"
-        android:fontFamily="@font/jalnan"
-        android:text="확인"
-        android:textColor="@color/white"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.929"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.703"
-        tools:ignore="TextContrastCheck" />
+        <!-- EditText - 바꿀 비밀번호 입력 -->
+        <EditText
+            android:id="@+id/inputRePw1"
+            android:layout_width="380dp"
+            android:layout_height="56dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="330dp"
+            android:background="@drawable/round"
+            android:ems="10"
+            android:fontFamily="@font/micross"
+            android:hint="   비밀번호(8자리 이상)"
+            android:inputType="textPassword"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.516"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.475"
+            tools:ignore="SpeakableTextPresentCheck" />
 
+        <!-- EditText - 바꿀 비밀번호 확인 -->
+        <EditText
+            android:id="@+id/inputRePw2"
+            android:layout_width="380dp"
+            android:layout_height="56dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="400dp"
+            android:background="@drawable/round"
+            android:ems="10"
+            android:fontFamily="@font/micross"
+            android:hint="   비밀번호 재확인"
+            android:inputType="textPassword"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.574"
+            tools:ignore="SpeakableTextPresentCheck" />
 
+        <!-- Button - 취소 버튼 -->
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="181dp"
+            android:layout_height="61dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="490dp"
+            android:background="#EA5148"
+            android:fontFamily="@font/jalnan"
+            android:text="취소"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.078"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.702"
+            tools:ignore="TextContrastCheck" />
+
+        <!-- Button - 확인 버튼 -->
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="181dp"
+            android:layout_height="61dp"
+            android:layout_marginLeft="212dp"
+            android:layout_marginTop="490dp"
+            android:background="@drawable/basicbutton_sky"
+            android:fontFamily="@font/jalnan"
+            android:text="확인"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.929"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.703"
+            tools:ignore="TextContrastCheck" />
+
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
