@@ -14,6 +14,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="250dp">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="30dp"
@@ -161,7 +162,7 @@
             android:layout_marginTop="15dp"
             android:layout_marginEnd="18dp"
             android:fontFamily="@font/jalnan"
-            android:text="품종       "
+            android:text="품종"
             android:textColor="@color/down_gray"
             android:textSize="18dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -170,6 +171,7 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="37dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -179,7 +181,7 @@
                 android:id="@+id/btn_more_navi_petBreed"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:layout_marginLeft="252dp"
+                android:layout_marginLeft="251dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/ic_baseline_keyboard_arrow_down_24"
                 tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
@@ -192,6 +194,7 @@
                 android:background="@drawable/round"
                 android:ems="10"
                 android:fontFamily="@font/micross" />
+
 
         </RelativeLayout>
 
