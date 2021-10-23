@@ -46,6 +46,9 @@
             android:name=".Findertalk_mypetpic_write"
             android:exported="false" /> <!-- first layout -->
         <activity
+            android:name=".Findertalk_BoardMain_Activity"
+            android:exported="false" /><!-- cardview and Recyclerview-->
+        <activity
             android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
