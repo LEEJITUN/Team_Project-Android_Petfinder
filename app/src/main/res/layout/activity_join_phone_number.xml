@@ -62,13 +62,13 @@
 
     <!-- 에딧텍스트 - 휴대폰 번호 -->
     <EditText
-        android:id="@+id/inputPhoneNum"
+        android:id="@+id/input_phone_num"
         android:layout_width="380dp"
         android:layout_height="56dp"
         android:background="@drawable/round"
         android:ems="10"
         android:fontFamily="@font/jalnan"
-        android:hint="   휴대폰 번호"
+        android:hint="   휴대폰 번호를 - 없이 입력해주세요."
         android:inputType="phone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -80,7 +80,7 @@
 
     <!-- 버튼 - 인증 번호 요청 -->
     <Button
-        android:id="@+id/btnRevercode"
+        android:id="@+id/send_sms_button"
         android:layout_width="380dp"
         android:layout_height="56dp"
         android:background="@drawable/requestbutton_yellow"
@@ -94,6 +94,46 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.537"
+        tools:ignore="TextContrastCheck" />
+
+    <!-- 에딧텍스트 - 휴대폰 번호 -->
+
+    <!-- 버튼 - 인증 번호 요청 -->
+
+    <EditText
+        android:id="@+id/input_check_num"
+        android:layout_width="380dp"
+        android:layout_height="56dp"
+        android:background="@drawable/round"
+        android:ems="10"
+        android:fontFamily="@font/jalnan"
+        android:hint="   인증번호 입력"
+        android:inputType="phone"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.674"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/check_button"
+        android:layout_width="380dp"
+        android:layout_height="56dp"
+        android:background="@drawable/requestbutton_yellow"
+        android:fontFamily="@font/jalnan"
+        android:text="인증번호 확인"
+        android:textColor="@color/yello"
+        android:textSize="17sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.78"
         tools:ignore="TextContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
