@@ -72,7 +72,7 @@ class Join_PhoneNumber_Activity : AppCompatActivity() {
             sendSMS(inputPhoneNum.getText().toString(),"인증번호"+checkNum)
 
             // 공기계로 테스트 할 거기때문에 문자는 가지 않고 토스트로 확인하기 위해 해둔것.
-            Toast.makeText(getApplicationContext(), checkNum, Toast.LENGTH_SHORT).show()
+            //Toast.makeText(getApplicationContext(), checkNum, Toast.LENGTH_SHORT).show()
 
         })
 
