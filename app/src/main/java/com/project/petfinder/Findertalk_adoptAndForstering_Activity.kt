@@ -6,17 +6,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class Findertalk_BoardMain_Activity :  AppCompatActivity() {
+class Findertalk_adoptAndForstering_Activity :  AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_findertalk_findmypet)
+        setContentView(R.layout.activity_findertalk_adopt)
         val view = findViewById<View>(R.id.main_recyclerview) as RecyclerView
         view.layoutManager = LinearLayoutManager(this)
         view.adapter = Findertalk_MyRecyclerViewAdapter()
     }
-<<<<<<< HEAD
 }
-//CardViewItemDTO.kt, Findertalk_MyRecyclerViewAdapter.kt is connected to this file.
-=======
-}
->>>>>>> origin/master
