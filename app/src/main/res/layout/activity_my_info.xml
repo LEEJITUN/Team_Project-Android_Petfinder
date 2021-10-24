@@ -16,17 +16,18 @@
             layout="@layout/toolbar_sky"
             android:id="@+id/toolbar"/>
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="150dp"
                 android:layout_height="34dp"
+                android:layout_marginLeft="135dp"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/jalnanotf"
                 android:gravity="center_horizontal"
-                android:text="내정보"
+                android:text="내 정보"
                 android:textColor="@color/white"
                 android:textSize="30dp" />
 
@@ -34,12 +35,12 @@
                 android:id="@+id/btn_Setting"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:layout_marginLeft="360dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="80dp"
                 android:background="@drawable/ic_baseline_settings_24"
                 tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
-        </RelativeLayout>
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

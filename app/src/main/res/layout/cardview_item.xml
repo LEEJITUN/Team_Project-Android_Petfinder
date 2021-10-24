@@ -20,19 +20,11 @@
             <!-- 펫 이미지 크기조정은 centerCrop -->
             <ImageView
                 android:id="@+id/cardview_imageview"
-<<<<<<< HEAD
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/tory2"
-                android:layout_margin="5dp"/>
-=======
                 android:layout_width="130dp"
                 android:layout_height="130dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/tory2"
                 android:layout_margin="20dp"/>
->>>>>>> origin/master
 
             <!-- 펫 이름은 펫이미지에 대해layout_toRightOf cardview_content이였다-->
             <TextView
@@ -41,11 +33,7 @@
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/cardview_imageview"
                 android:text="[개] 시바이누"
-<<<<<<< HEAD
-                android:layout_marginTop="10dp"
-=======
                 android:layout_marginTop="20dp"
->>>>>>> origin/master
                 android:layout_marginLeft="5dp"
                 android:fontFamily="@font/jalnan"/>
 
