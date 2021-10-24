@@ -14,9 +14,4 @@ class Findertalk_BoardMain_Activity :  AppCompatActivity() {
         view.layoutManager = LinearLayoutManager(this)
         view.adapter = Findertalk_MyRecyclerViewAdapter()
     }
-<<<<<<< HEAD
 }
-//CardViewItemDTO.kt, Findertalk_MyRecyclerViewAdapter.kt is connected to this file.
-=======
-}
->>>>>>> origin/master
