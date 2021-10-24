@@ -1,14 +1,17 @@
 package com.project.petfinder
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.ArrayAdapter
+import android.widget.Button
 import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
 
-class Findertalk_mypetpic_write_Activity : AppCompatActivity(){
+class Findertalk_adopt_write_Activity : AppCompatActivity(){
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_findertalk_mypetpic_write)
+        setContentView(R.layout.activity_findertalk_adopt_write)
         title = "스피너 테스트"
 
         var Boardtitle = arrayOf("임보/입양", "커뮤니티")

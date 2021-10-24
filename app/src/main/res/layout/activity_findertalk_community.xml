@@ -6,9 +6,58 @@
     android:orientation="vertical"
     tools:context=".Findertalk_community_Activity">
 
-    <include
-        layout="@layout/toolbar_orange"
-        android:id="@+id/toolbar"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- tool bar -->
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar_orange" />
+
+            <Button
+                android:id="@+id/btn_Back"
+                android:layout_width="35dp"
+                android:layout_marginTop="12dp"
+                android:layout_height="35dp"
+                android:background="@drawable/ic_baseline_keyboard_arrow_left_24" />
+
+            <TextView
+                android:id="@+id/findertalk"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/jalnanotf"
+                android:text="FinderTalk"
+                android:textColor="@color/white"
+                android:textSize="30dp" />
+
+            <Button
+                android:id="@+id/my"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/findertalk"
+                android:layout_width="54dp"
+                android:layout_height="45dp"
+                android:background="@drawable/my" />
+            <!-- Write -->
+            <Button
+                android:id="@+id/write"
+                android:layout_toRightOf="@id/my"
+                android:layout_marginTop="5dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:scaleType="center"
+                android:background="@drawable/ic_baseline_create_24" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"

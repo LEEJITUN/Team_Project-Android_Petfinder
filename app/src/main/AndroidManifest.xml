@@ -69,16 +69,7 @@
             android:exported="false" />
         <activity
             android:name=".Findertalk_adoptAndForstering_Activity"
-            android:exported="false" >
-            <!--                <intent-filter>-->
-            <!--                    <action android:name="android.intent.action.MAIN" />-->
-
-            <!--                    <category android:name="android.intent.category.LAUNCHER" />-->
-            <!--                </intent-filter>-->
-        </activity>
-        <activity
-            android:name=".Findertalk_mypetpic_write_Activity"
-            android:exported="false" />
+            android:exported="true" />
         <!-- first layout -->
         <activity
             android:name=".LoginActivity"

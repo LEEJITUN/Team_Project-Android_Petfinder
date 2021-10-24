@@ -15,39 +15,20 @@
         android:orientation="horizontal"
         android:gravity="center_vertical">
         <!-- arrow back -->
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="match_parent"
-            android:scaleType="center"
-            android:src="@drawable/ic_baseline_arrow_back_24" />
+        <!--        <ImageView-->
+        <!--            android:layout_width="50dp"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:scaleType="center"-->
+        <!--            android:src="@drawable/ic_baseline_arrow_back_24" />-->
         <!-- Title  -->
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="핀더톡"
             android:textColor="@android:color/white"
             android:textSize="24sp"
             android:fontFamily="@font/jalnan"/>
-
-        <!-- Switch .-->
-        <Switch
-            android:id="@+id/switch1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:minHeight="24sp"
-            android:text="My"
-            android:fontFamily="@font/jalnan"
-            android:textColor="@android:color/white"/>
-        <!-- Write -->
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="match_parent"
-            android:scaleType="center"
-            android:src="@drawable/ic_baseline_create_24" />
-
 
     </LinearLayout><!-- Toolbar End-->
 

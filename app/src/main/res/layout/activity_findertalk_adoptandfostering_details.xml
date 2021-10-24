@@ -54,8 +54,8 @@
             android:layout_weight="1"
             android:backgroundTint="@color/white"
             android:fontFamily="@font/jalnan"
-            android:text="임보/입양"
-            android:textColor="@color/black" />
+            android:textColor="@color/orange_june"
+            android:text="임보/입양" />
 
         <Button
             android:layout_width="wrap_content"
@@ -71,8 +71,7 @@
             android:layout_weight="1"
             android:backgroundTint="@color/white"
             android:fontFamily="@font/jalnan"
-            android:text="가족 찾는 중"
-            android:textColor="@color/orange_june" />
+            android:text="가족 찾는 중" />
 
     </LinearLayout>
     <androidx.cardview.widget.CardView
@@ -159,12 +158,12 @@
                 android:background="@drawable/ic_baseline_favorite_border_24" />
 
             <TextView
+                android:layout_below="@+id/cardview_imageview"
+                android:layout_toRightOf="@+id/btn_board_like"
+                android:layout_marginLeft="10dp"
                 android:id="@+id/text_board_like"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cardview_imageview"
-                android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@+id/btn_board_like"
                 android:background="@drawable/round"
                 android:fontFamily="@font/jalnan"
                 android:gravity="center"
@@ -191,71 +190,6 @@
                 android:gravity="center"
                 android:text="댓글달기" />
 
-            <TextView
-                android:id="@+id/finding_mypet_content_name"
-                android:layout_marginTop="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/btn_board_like"
-                android:layout_centerHorizontal="true"
-                android:text="이름: 토리"
-                android:fontFamily="@font/jalnan"/>
-            <TextView
-                android:id="@+id/finding_mypet_content_pumjong"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/finding_mypet_content_name"
-                android:layout_centerHorizontal="true"
-                android:text="품종: [개] 시바이누"
-                android:fontFamily="@font/jalnan"/>
-            <TextView
-                android:id="@+id/finding_mypet_content_date"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/finding_mypet_content_pumjong"
-                android:layout_centerHorizontal="true"
-                android:text="실종일: 2021-09-30"
-                android:fontFamily="@font/jalnan"/>
-            <TextView
-                android:id="@+id/finding_mypet_content_place"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/finding_mypet_content_date"
-                android:layout_centerHorizontal="true"
-                android:text="실종 위치: 5단지 올리브 옆"
-                android:fontFamily="@font/jalnan"/>
-            <TextView
-                android:id="@+id/finding_mypet_content_color"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/finding_mypet_content_place"
-                android:layout_centerHorizontal="true"
-                android:text="색상: 황갈색"
-                android:fontFamily="@font/jalnan"/>
-            <TextView
-                android:id="@+id/finding_mypet_content_age"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/finding_mypet_content_color"
-                android:layout_centerHorizontal="true"
-                android:text="나이: 2018년생"
-                android:fontFamily="@font/jalnan"/>
-            <TextView
-                android:id="@+id/finding_mypet_content_weight"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/finding_mypet_content_age"
-                android:layout_centerHorizontal="true"
-                android:text="체중: 11kg"
-                android:fontFamily="@font/jalnan"/>
-            <TextView
-                android:id="@+id/finding_mypet_content_sex"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/finding_mypet_content_weight"
-                android:layout_centerHorizontal="true"
-                android:text="성별: 수"
-                android:fontFamily="@font/jalnan"/>
 
         </RelativeLayout>
 

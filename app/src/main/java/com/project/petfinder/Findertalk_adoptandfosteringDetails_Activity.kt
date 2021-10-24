@@ -6,6 +6,6 @@ import android.os.Bundle
 class Findertalk_adoptandfosteringDetails_Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_adoptandfostering_details)
+        setContentView(R.layout.activity_findertalk_adoptandfostering_details)
     }
 }
