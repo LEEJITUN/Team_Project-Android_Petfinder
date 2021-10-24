@@ -10,6 +10,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".Findertalk_findingMyPet_details_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Findertalk_community_details_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Findertalk_adoptandfosteringDetails_Activity"
+            android:exported="false" >
+        </activity>
+        <activity
+            android:name=".Findertalk_findingMyPet_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Findertalk_community_Activity"
+            android:exported="false" />
+        <activity
             android:name=".Pet_info_Register_Activity"
             android:exported="false" />
         <activity
@@ -37,10 +53,16 @@
             android:name=".Join_UserInfo_Activity"
             android:exported="false" />
         <activity
-            android:name=".Findertalk_faindertalktalk"
-            android:exported="false" />
+            android:name=".Findertalk_adoptAndForstering_Activity"
+            android:exported="false" >
+<!--                <intent-filter>-->
+<!--                    <action android:name="android.intent.action.MAIN" />-->
+
+<!--                    <category android:name="android.intent.category.LAUNCHER" />-->
+<!--                </intent-filter>-->
+        </activity>
         <activity
-            android:name=".Findertalk_mypetpic_write"
+            android:name=".Findertalk_mypetpic_write_Activity"
             android:exported="false" />
         <!-- first layout -->
         <activity

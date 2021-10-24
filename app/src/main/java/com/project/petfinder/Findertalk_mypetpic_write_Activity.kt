@@ -5,19 +5,15 @@ import android.widget.ArrayAdapter
 import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
 
-class Findertalk_mypetpic_write : AppCompatActivity(){
+class Findertalk_mypetpic_write_Activity : AppCompatActivity(){
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_findertalk_mypetpic_write)
         title = "스피너 테스트"
 
-        var Boardtitle = arrayOf("Pet 톡톡", "짱구는 못말려",
-            "아저씨", "아바타", "대부", "국가대표", "토이스토리3",
-            "마당을 나온 암탉", "죽은 시인의 사회", "서유기")
+        var Boardtitle = arrayOf("임보/입양", "커뮤니티")
 
-        var MypetPic = arrayOf("우리 아이 자랑하기!", "짱구는 못말려",
-            "아저씨", "아바타", "대부", "국가대표", "토이스토리3",
-            "마당을 나온 암탉", "죽은 시인의 사회", "서유기")
+        var MypetPic = arrayOf("임시보호","입양","우리 아이 자랑하기")
 
         var spinner = findViewById<Spinner>(R.id.spinner)
         var spinner2 = findViewById<Spinner>(R.id.spinner2)
