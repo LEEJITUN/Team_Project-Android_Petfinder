@@ -40,6 +40,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="MissingConstraints">
+
         <!-- 날짜 -->
         <LinearLayout
             android:layout_width="wrap_content"
@@ -77,6 +78,7 @@
                     android:fontFamily="@font/micross" />
             </RelativeLayout>
         </LinearLayout>
+
         <!-- 시간 -->
         <LinearLayout
             android:layout_width="wrap_content"
@@ -228,8 +230,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="60dp"
-            android:layout_marginTop="360dp"
-            android:layout_marginBottom="250dp">
+            android:layout_marginTop="360dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -237,7 +238,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="18dp"
                 android:fontFamily="@font/jalnan"
-                android:text="메모       "
+                android:text="메모 "
                 android:textColor="@color/down_gray"
                 android:textSize="18dp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -246,6 +247,7 @@
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
@@ -258,9 +260,7 @@
                     android:layout_marginEnd="18dp"
                     android:background="@drawable/round"
                     android:ems="10"
-                    android:fontFamily="@font/micross"
-                    tools:ignore="SpeakableTextPresentCheck" />
-
+                    android:fontFamily="@font/micross" />
             </RelativeLayout>
         </LinearLayout>
 
@@ -315,7 +315,6 @@
             android:layout_marginTop="600dp"
             android:layout_marginBottom="250dp">
 
-
             <!-- Button - 확인 버튼 -->
             <Button
                 android:id="@+id/btn_Submit"
@@ -333,5 +332,4 @@
         </LinearLayout>
 
     </RelativeLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

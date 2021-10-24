@@ -16,6 +16,7 @@
             layout="@layout/toolbar_green" />
 
         <TextView
+            android:id="@+id/textView_year_month"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -24,7 +25,6 @@
             android:text="2021.10"
             android:textColor="@color/white"
             android:textSize="30dp" />
-
         <Button
             android:id="@+id/btn_Pet_Check"
             android:layout_width="35dp"
@@ -81,8 +81,6 @@
                 android:textColor="@color/white" />
 
         </RelativeLayout>
-
-
 
         <LinearLayout
             android:layout_width="match_parent"
