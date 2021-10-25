@@ -1,6 +1,5 @@
 package com.project.petfinder
 
-import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
@@ -71,8 +70,13 @@ class Join_PhoneNumber_Activity : AppCompatActivity() {
             // sms 보내기
             sendSMS(inputPhoneNum.getText().toString(),"인증번호"+checkNum)
 
+
+            // 인증 번호 체크 부분 활성화
+            inputCheckNum.setVisibility(View.VISIBLE);
+            checkBt.setVisibility(View.VISIBLE);
+
             // 공기계로 테스트 할 거기때문에 문자는 가지 않고 토스트로 확인하기 위해 해둔것.
-            //Toast.makeText(getApplicationContext(), checkNum, Toast.LENGTH_SHORT).show()
+            Toast.makeText(getApplicationContext(), checkNum, Toast.LENGTH_SHORT).show()
 
         })
 
@@ -102,9 +106,6 @@ class Join_PhoneNumber_Activity : AppCompatActivity() {
 
         Toast.makeText(getBaseContext(), "메세지가 전송 되었습니다.", Toast.LENGTH_SHORT).show()
 
-        // 인증 번호 체크 부분 활성화
-        inputCheckNum.setVisibility(View.VISIBLE);
-        checkBt.setVisibility(View.VISIBLE);
     }
 
     // 인증 번호 생성
