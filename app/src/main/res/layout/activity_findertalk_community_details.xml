@@ -33,7 +33,7 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/jalnanotf"
                 android:gravity="center_horizontal"
-                android:text="새 글 작성"
+                android:text="상세보기"
                 android:textColor="@color/white"
                 android:textSize="30dp" />
 
