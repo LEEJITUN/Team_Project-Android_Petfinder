@@ -13,6 +13,7 @@ import android.view.LayoutInflater
 import android.view.View
 import com.project.petfinder.Adapter.PagerAdapter
 import com.project.petfinder.R
+import com.project.petfinder.fragment.child.Findertalk_adoptAndForstering_Fragment
 import com.project.petfinder.fragment.child.Findertalk_adoptandfosteringDetailsFragment
 import com.project.petfinder.fragment.child.Findertalk_community_Fragment
 import com.project.petfinder.fragment.child.Findertalk_findingMyPet_Fragment
@@ -40,11 +41,10 @@ class FinderTalkNavActivity : Fragment(){
         return view
     }
 
-
     // Add Fragments to Tabs
     private fun setupViewPager(viewPager: ViewPager) {
         val adapter = PagerAdapter(childFragmentManager)
-        adapter.addFragment(Findertalk_adoptandfosteringDetailsFragment(), "임보/입양")
+        adapter.addFragment(Findertalk_adoptAndForstering_Fragment(), "임보/입양")
         adapter.addFragment(Findertalk_community_Fragment(), "커뮤니티")
         adapter.addFragment(Findertalk_findingMyPet_Fragment(), "가족 찾는 중")
         viewPager.adapter = adapter
