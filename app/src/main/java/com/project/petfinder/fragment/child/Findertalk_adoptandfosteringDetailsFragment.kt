@@ -1,4 +1,4 @@
-package com.project.petfinder.fragment
+package com.project.petfinder.fragment.child
 
 import android.os.Bundle
 import android.view.LayoutInflater

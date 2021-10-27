@@ -31,12 +31,6 @@
             android:name=".Findertalk_community_details_Activity"
             android:exported="false" />
         <activity
-            android:name=".Findertalk_findingMyPet_Activity"
-            android:exported="false" />
-        <activity
-            android:name=".Findertalk_community_Activity"
-            android:exported="false" />
-        <activity
             android:name=".Pet_info_Register_Activity"
             android:exported="false" />
         <activity
@@ -49,7 +43,7 @@
             android:name=".Calendar_New_Schedule_Activity"
             android:exported="false" />
         <activity
-            android:name=".CommonNavActivity"
+            android:name=".Nav.CommonNavActivity"
             android:exported="false" />
         <activity
             android:name=".JoinCompliteActivity"
@@ -63,9 +57,6 @@
         <activity
             android:name=".Join_UserInfo_Activity"
             android:exported="false" />
-        <activity
-            android:name=".Findertalk_adoptAndForstering_Activity"
-            android:exported="true" />
         <!-- first layout -->
         <activity
             android:name=".LoginActivity"

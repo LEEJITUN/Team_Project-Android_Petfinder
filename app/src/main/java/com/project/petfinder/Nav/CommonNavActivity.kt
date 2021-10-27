@@ -1,8 +1,10 @@
-package com.project.petfinder
+package com.project.petfinder.Nav
 
 import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.project.petfinder.Adapter.PagerAdapter
+import com.project.petfinder.R
 import com.project.petfinder.fragment.CalendarFragment
 import com.project.petfinder.fragment.MainFragment
 import com.project.petfinder.fragment.MyInfoFragment
@@ -16,11 +18,10 @@ class CommonNavActivity : AppCompatActivity() {
 
             setContentView(R.layout.activity_common_nav)
 
-
             val adapter = PagerAdapter(supportFragmentManager)
             adapter.addFragment(MainFragment(), "메인")
             adapter.addFragment(CalendarFragment(), "캘린더")
-//          adapter.addFragment(MyPageFragment(), "핀더톡")
+            adapter.addFragment(FinderTalkNavActivity(), "핀더톡")
             adapter.addFragment(MyInfoFragment(), "내정보")
             
             val viewpager = findViewById<androidx.viewpager.widget.ViewPager>(R.id.viewpager)
