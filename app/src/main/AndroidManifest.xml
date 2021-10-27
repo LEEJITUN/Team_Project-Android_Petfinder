@@ -31,10 +31,6 @@
             android:name=".Findertalk_community_details_Activity"
             android:exported="false" />
         <activity
-            android:name=".Findertalk_adoptandfosteringDetails_Activity"
-            android:exported="false" >
-        </activity>
-        <activity
             android:name=".Findertalk_findingMyPet_Activity"
             android:exported="false" />
         <activity
