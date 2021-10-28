@@ -5,10 +5,17 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
+import com.project.petfinder.Nav.CommonNavActivity
+import com.project.petfinder.Nav.FinderTalkMainFragment
 import com.project.petfinder.R
 
+
 class HomeFragment : Fragment() {
+
+    lateinit var commonNavActivity: CommonNavActivity
 
     companion object {
         fun newInstance() : HomeFragment = HomeFragment()
@@ -20,41 +27,22 @@ class HomeFragment : Fragment() {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
+
+        commonNavActivity = getActivity() as CommonNavActivity
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle? ): View? {
-        return inflater.inflate(R.layout.activity_home, container, false) //반환형 : View }
+
+        var view: View = inflater.inflate(R.layout.activity_home, container, false)
+
+        var btnMore = view?.findViewById(R.id.btnMore) as Button
+
+        // 프래그먼트 1에서 프래그먼트 2를 띄운다.
+        btnMore.setOnClickListener(View.OnClickListener {
+            commonNavActivity.change_to_Menu(1)
+        })
+        return view
+
     }
 
 }
-
-//class HomeFragment : Fragment() ,View.OnClickListener  {
-//    private val fragmentA = Fragment()
-//    var commonNavActivity: CommonNavActivity? = null
-//
-//    override fun onCreateView(
-//        inflater: LayoutInflater, container: ViewGroup?,
-//        savedInstanceState: Bundle?
-//    ): View? {
-//
-//        val view: View = inflater.inflate(com.project.petfinder.R.layout.activity_findertalk_nav, container, false)
-//
-//        onClick(view)
-//
-//        return inflater.inflate(com.project.petfinder.R.layout.activity_main, container, false)
-//    }
-//
-//    override fun onAttach(context: Context) {
-//        super.onAttach(context)
-//        commonNavActivity = context as CommonNavActivity
-//    }
-//
-//    override fun onClick(view: View?) {
-//
-//        var button = view?.findViewById(com.project.petfinder.R.id.btnMore) as Button
-//        // 프래그먼트 1에서 프래그먼트 2를 띄운다.
-//        button.setOnClickListener(View.OnClickListener { commonNavActivity?.fragmentChange(1) })
-//
-//
-//    }
-//}

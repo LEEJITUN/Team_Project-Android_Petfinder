@@ -1,8 +1,11 @@
 package com.project.petfinder.Nav
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.project.petfinder.R
 import com.project.petfinder.fragment.CalendarFragment
@@ -20,6 +23,7 @@ class CommonNavActivity : AppCompatActivity() , BottomNavigationView.OnNavigatio
     private lateinit var mypageFragment: MyInfoFragment
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_common_nav)
@@ -29,6 +33,7 @@ class CommonNavActivity : AppCompatActivity() , BottomNavigationView.OnNavigatio
         bottom_navigation.setOnNavigationItemSelectedListener(this)
         homeFragment = HomeFragment.newInstance()
         supportFragmentManager.beginTransaction().add(R.id.frame_fragments, homeFragment).commit()
+
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
@@ -53,49 +58,30 @@ class CommonNavActivity : AppCompatActivity() , BottomNavigationView.OnNavigatio
             }
         }
         return true
+
+    }
+
+    fun change_to_Menu(index:Int) {
+
+        when (index) {
+            1 -> { // 펫핀더
+                // add the fragement here
+                finderTalkMainFragment = FinderTalkMainFragment.newInstance()
+                supportFragmentManager.beginTransaction().replace(R.id.frame_fragments, finderTalkMainFragment).commit()
+            }
+            2 -> { // 내정보
+
+            }
+            else -> {
+                homeFragment = HomeFragment.newInstance()
+                supportFragmentManager.beginTransaction().replace(R.id.frame_fragments, homeFragment).commit()
+            }
+        }
+
+
     }
 
 
-
-
-//class CommonNavActivity : AppCompatActivity() {
-//        private lateinit var context: Context
-//
-//        var frameLayout1:FinderTalkNavActivity? = null
-//
-//        override fun onCreate(savedInstanceState: Bundle?) {
-//            super.onCreate(savedInstanceState)
-//            setContentView(com.project.petfinder.R.layout.activity_common_nav)
-//
-//            val adapter = PagerAdapter(supportFragmentManager)
-//            adapter.addFragment(MainFragment(), "메인")
-//            adapter.addFragment(CalendarFragment(), "캘린더")
-//            adapter.addFragment(FinderTalkNavActivity(), "핀더톡")
-//            adapter.addFragment(MyInfoFragment(), "내정보")
-//
-//            val viewpager = findViewById<androidx.viewpager.widget.ViewPager>(com.project.petfinder.R.id.viewpager)
-//            viewpager.adapter = adapter
-//            val tablayout = findViewById<com.google.android.material.tabs.TabLayout>(com.project.petfinder.R.id.tablayout)
-//            tablayout.setupWithViewPager(viewpager)
-//        }
-//
-//    // fragmentA 에서 frameLayoutB에 fragment 추가하기 위해 호출 하는 메서드
-////    fun openFragmentOnFrameLayout(int: Int){
-////        val transaction = supportFragmentManager.beginTransaction()
-////        when(int){
-////            1 -> transaction.replace(R.id.viewpager, FinderTalkNavActivity())
-////        }
-////        transaction.commit()
-////    }
-//
-//    fun fragmentChange(index: Int) {
-//        if (index == 1) {
-//            frameLayout1?.let {
-//                supportFragmentManager.beginTransaction()
-//                    .replace(com.project.petfinder.R.id.viewpager, it).commit()
-//            }
-//        }
-//    }
 
 
 
