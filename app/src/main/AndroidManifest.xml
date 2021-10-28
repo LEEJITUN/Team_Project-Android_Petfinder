@@ -24,12 +24,7 @@
         <activity
             android:name=".My_info_Delete"
             android:exported="false" />
-        <activity
-            android:name=".Findertalk_findingMyPet_details_Activity"
-            android:exported="false" />
-        <activity
-            android:name=".Findertalk_community_details_Activity"
-            android:exported="false" />
+
         <activity
             android:name=".Pet_info_Register_Activity"
             android:exported="false" />

@@ -38,7 +38,7 @@ class FinderTalkMainFragment : Fragment(){
         var view: View = inflater.inflate(R.layout.activity_findertalk, container, false)
 
         tabLayout = view.findViewById(R.id.tab_layout)
-        viewPager = view.findViewById(R.id.findertalk_view_pager)
+        viewPager = view.findViewById(R.id.findertalk_view_pager)//원래 이거 findertalk_view_pager
 
         val adapter = FinderTalkViewPagerAdapter(this)
         viewPager.adapter = adapter
