@@ -23,21 +23,12 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="34dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="15dp"
                 android:fontFamily="@font/jalnanotf"
                 android:gravity="center_horizontal"
                 android:text="내정보"
                 android:textColor="@color/white"
-                android:textSize="30dp" />
-
-            <Button
-                android:id="@+id/btn_Setting"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:layout_marginLeft="360dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/ic_baseline_settings_24"
-                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                android:textSize="20dp" />
 
         </RelativeLayout>
 
@@ -67,16 +58,15 @@
             <TextView
                 android:id="@+id/myName"
                 android:layout_width="wrap_content"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="140dp"
                 android:layout_marginTop="30dp"
                 android:fontFamily="@font/jalnan"
                 android:text="류수민"
                 android:textColor="@color/down_black"
-                android:textSize="25dp" />
+                android:textSize="20dp" />
 
             <!-- 이미지 뷰 - 아이콘 생성 -->
-
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"
@@ -137,7 +127,7 @@
         <RelativeLayout
             android:id="@+id/relativeLayout2"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="350dp"
             android:background="@drawable/mainbox_white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -165,11 +155,12 @@
                 android:fontFamily="@font/jalnan"
                 android:text="마루"
                 android:textColor="@color/down_black"
-                android:textSize="25dp" />
+                android:textSize="20dp" />
 
-            <!-- 텍스트 뷰 - 전화번호 -->
+            <!-- 이미지버튼 -  -->
 
             <ImageButton
+                android:id="@+id/btnModify"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_alignParentTop="true"
@@ -193,15 +184,30 @@
             <!-- 버튼 - 반려동물 등록하기 -->
             <Button
                 android:id="@+id/btnRegist"
-                android:layout_width="380dp"
+                android:layout_width="350dp"
                 android:layout_height="56dp"
-                android:layout_marginLeft="15dp"
+                android:layout_marginLeft="27dp"
                 android:layout_marginTop="130dp"
                 android:background="@drawable/requestbutton_sky"
                 android:fontFamily="@font/jalnan"
                 android:text="반려동물 등록하기"
                 android:textColor="@color/sky_sumin"
-                android:textSize="17sp" />
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="200dp">
+
+                <ListView
+                    android:id="@+id/listView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:fontFamily="@font/jalnanotf"
+                    tools:ignore="InvalidId" />
+
+            </LinearLayout>
 
         </RelativeLayout>
 
@@ -246,39 +252,39 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="90dp"
-                android:layout_marginTop="28dp"
+                android:layout_marginTop="33dp"
                 android:fontFamily="@font/jalnan"
                 android:text="다이어리"
                 android:textColor="@color/down_black"
-                android:textSize="25dp" />
+                android:textSize="20dp" />
 
             <!-- 버튼 - 반려동물 등록하기 -->
             <Button
                 android:id="@+id/btnDiary"
-                android:layout_width="185dp"
+                android:layout_width="175dp"
                 android:layout_height="56dp"
-                android:layout_marginLeft="15dp"
+                android:layout_marginLeft="27dp"
                 android:layout_marginTop="100dp"
                 android:background="@drawable/requestbutton_sky"
                 android:fontFamily="@font/jalnan"
                 android:text="다이어리 추가하기"
                 android:textColor="@color/sky_sumin"
-                android:textSize="17sp" />
+                android:textSize="15sp" />
 
             <!-- 버튼 - 반려동물 등록하기 -->
             <Button
                 android:id="@+id/btnDiaryView"
-                android:layout_width="185dp"
+                android:layout_width="175dp"
                 android:layout_height="56dp"
-                android:layout_marginLeft="210dp"
+                android:layout_marginLeft="207dp"
                 android:layout_marginTop="100dp"
                 android:background="@drawable/requestbutton_sky"
                 android:fontFamily="@font/jalnan"
                 android:text="다이어리 보기"
                 android:textColor="@color/sky_sumin"
-                android:textSize="17sp" />
+                android:textSize="15sp" />
         </RelativeLayout>
 
         <!-- 뷰 - 일자 선 -->
@@ -314,14 +320,14 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/btn1"
+                android:id="@+id/btnPwchange"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:background="@color/white"
                 android:fontFamily="@font/jalnan"
                 android:text="비밀번호 변경"
                 android:textColor="@color/down_black"
-                android:textSize="17sp" />
+                android:textSize="15sp" />
 
 
             <View
@@ -333,7 +339,7 @@
                 android:background="#DCDADA" />
 
             <Button
-                android:id="@+id/btn2"
+                android:id="@+id/btnWithdrawal"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginTop="58dp"
@@ -341,7 +347,7 @@
                 android:fontFamily="@font/jalnan"
                 android:text="회원탈퇴"
                 android:textColor="@color/down_black"
-                android:textSize="17sp" />
+                android:textSize="15sp" />
 
             <View
                 android:id="@+id/view3"
@@ -354,7 +360,7 @@
                 android:layout_marginEnd="0dp" />
 
             <Button
-                android:id="@+id/btn3"
+                android:id="@+id/btnLogout"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginTop="116dp"
@@ -362,7 +368,7 @@
                 android:fontFamily="@font/jalnan"
                 android:text="로그아웃"
                 android:textColor="@color/down_black"
-                android:textSize="17sp" />
+                android:textSize="15sp" />
 
             <View
                 android:id="@+id/view4"

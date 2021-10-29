@@ -16,23 +16,23 @@
         <!--        android:hardwareAccelerated="false"-->
 
         <activity
-            android:name=".My_Diary_View_Activity"
+            android:name=".MyDiaryViewFragment"
             android:exported="false" />
         <activity
-            android:name=".My_Diary_Write_Activity"
+            android:name=".MyDiaryWriteFragment"
             android:exported="false" />
         <activity
-            android:name=".My_info_Delete"
+            android:name=".MyInfoDeleteFragment"
             android:exported="false" />
 
         <activity
-            android:name=".Pet_info_Register_Activity"
+            android:name=".PetInfoRegisterFragment"
             android:exported="false" />
         <activity
-            android:name=".My_info_Change_pw_Activity"
+            android:name=".MyInfoChangePwFragment"
             android:exported="false" />
         <activity
-            android:name=".Pet_info_Modify_Activity"
+            android:name=".PetInfoModifyFragment"
             android:exported="false" />
         <activity
             android:name=".Calendar_New_Schedule_Activity"

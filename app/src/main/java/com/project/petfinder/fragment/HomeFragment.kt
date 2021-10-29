@@ -39,7 +39,7 @@ class HomeFragment : Fragment() {
 
         // 프래그먼트 1에서 프래그먼트 2를 띄운다.
         btnMore.setOnClickListener(View.OnClickListener {
-            commonNavActivity.change_to_Menu(1)
+            commonNavActivity.change_to_Menu("HOME_1")
         })
         return view
 
