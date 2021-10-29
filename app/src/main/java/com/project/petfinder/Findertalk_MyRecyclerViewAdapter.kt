@@ -1,48 +1,48 @@
-package com.project.petfinder
+package com.example.myapplication
 
-import androidx.recyclerview.widget.RecyclerView
-import com.project.petfinder.CardViewItemDTO
-import android.view.ViewGroup
 import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import android.widget.ImageView
-import com.project.petfinder.R
-import com.project.petfinder.Findertalk_MyRecyclerViewAdapter.RowCell
 import android.widget.TextView
-import java.util.ArrayList
+import androidx.recyclerview.widget.RecyclerView
+import com.project.petfinder.DataModel
+import com.project.petfinder.R
 
-class Findertalk_MyRecyclerViewAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-    private val cardViewItemDTOs = ArrayList<CardViewItemDTO>()
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        //XML세팅
-        val view =
-            LayoutInflater.from(parent.context).inflate(R.layout.cardview_item, parent, false)
-        return RowCell(view) //스태틱이므로 create inner class 'RowCell'
+//TODO: 일단 프래그먼트 형태로 바꿨으나, 화면에서 보이지 않음.
+class Findertalk_MyRecyclerViewAdapter(val listData: ArrayList<DataModel>,
+                                       val clickListener: ClickListener) : RecyclerView.
+                                        Adapter<Findertalk_MyRecyclerViewAdapter.MyViewHolder>(){
+
+    override fun onCreateViewHolder(parent: ViewGroup,
+                                    viewType: Int): Findertalk_MyRecyclerViewAdapter.MyViewHolder {
+        val view =  LayoutInflater.from(parent.context).inflate(
+            R.layout.cardview_item,
+            parent, false, )
+
+        return MyViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        (holder as RowCell).imageView.setImageResource(cardViewItemDTOs[position].imageview)
-        holder.contentName.text = cardViewItemDTOs[position].contentName
-        holder.contentColor.text = cardViewItemDTOs[position].contentColor
-        holder.contentLostdate.text = cardViewItemDTOs[position].contentLostdate
-        holder.contentLostplace.text = cardViewItemDTOs[position].contentLostplace
-        //아이템 세팅
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+        (holder as MyViewHolder).imageView.setImageResource(listData.get(position).imageview)
+        holder.contentName.text = listData.get(position).contentName
+        holder.contentColor.text = listData.get(position).contentColor
+        holder.contentLostdate.text = listData.get(position).contentLostdate
+        holder.contentLostplace.text = listData.get(position).contentLostplace
+        holder.itemView.setOnClickListener {
+            clickListener.onItemClick(listData.get(position))
+        }
     }
 
-    override fun getItemCount(): Int {
-        //이미지 카운터
-        return cardViewItemDTOs.size
-    }
-
-    private inner class RowCell(view: View) : RecyclerView.ViewHolder(view) {
+    class MyViewHolder(view: View):RecyclerView.ViewHolder(view){
         var imageView: ImageView
         var contentName: TextView
         var contentColor: TextView
         var contentLostdate: TextView
         var contentLostplace: TextView
 
-        init {
-            imageView = view.findViewById<View>(R.id.cardview_imageview) as ImageView
+        init{
+            imageView = view.findViewById(R.id.cardview_imageview) as ImageView
             contentName = view.findViewById<View>(R.id.cardview_content_name) as TextView
             contentColor = view.findViewById<View>(R.id.cardview_content_color) as TextView
             contentLostdate = view.findViewById<View>(R.id.cardview_content_lostdate) as TextView
@@ -50,13 +50,13 @@ class Findertalk_MyRecyclerViewAdapter : RecyclerView.Adapter<RecyclerView.ViewH
         }
     }
 
-    init {
-        cardViewItemDTOs.add(CardViewItemDTO(R.drawable.tory1, "[개] 시바이누", "적갈색|2018(년생)","잃어버린 날짜: 2021.09.28.","잃어버린 장소: 창평면 의병로 101"))
-        cardViewItemDTOs.add(CardViewItemDTO(R.drawable.tory2, "[개] 시바이누", "적갈색|2018(년생)","잃어버린 날짜: 2021.09.28.","잃어버린 장소: 창평면 의병로 101"))
-        cardViewItemDTOs.add(CardViewItemDTO(R.drawable.tory3, "[개] 시바이누", "적갈색|2018(년생)","잃어버린 날짜: 2021.09.28.","잃어버린 장소: 창평면 의병로 101"))
-        cardViewItemDTOs.add(CardViewItemDTO(R.drawable.tory3, "[개] 시바이누", "적갈색|2018(년생)","잃어버린 날짜: 2021.09.28.","잃어버린 장소: 창평면 의병로 101"))
-        cardViewItemDTOs.add(CardViewItemDTO(R.drawable.tory3, "[개] 시바이누", "적갈색|2018(년생)","잃어버린 날짜: 2021.09.28.","잃어버린 장소: 창평면 의병로 101"))
-        cardViewItemDTOs.add(CardViewItemDTO(R.drawable.tory3, "[개] 시바이누", "적갈색|2018(년생)","잃어버린 날짜: 2021.09.28.","잃어버린 장소: 창평면 의병로 101"))
-
+    override fun getItemCount(): Int {
+        return listData.size
+        TODO("Not yet implemented")
     }
+
+    interface ClickListener{
+        fun onItemClick(dataModel: DataModel)
+    }
+
 }
