@@ -23,6 +23,7 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/ic_baseline_keyboard_arrow_left_24"
             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="34dp"
@@ -42,7 +43,6 @@
         tools:ignore="MissingConstraints">
 
         <TextView
-            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -73,7 +73,6 @@
 
         <!-- 텍스트뷰 - 탈퇴안내 문구1 -->
         <TextView
-            android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -89,7 +88,6 @@
 
         <!-- 텍스트뷰 - 탈퇴안내 문구2 -->
         <TextView
-            android:id="@+id/textView2_Detail1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -102,7 +100,6 @@
             tools:layout_editor_absoluteY="186dp" />
 
         <TextView
-            android:id="@+id/textView2_Detail2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="189dp"
@@ -116,7 +113,6 @@
             tools:layout_editor_absoluteY="186dp" />
 
         <TextView
-            android:id="@+id/textView2_Detail3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="255dp"
@@ -130,7 +126,6 @@
 
         <!-- 텍스트뷰 - 탈퇴안내 문구3 -->
         <TextView
-            android:id="@+id/textView3_Detail1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -143,7 +138,6 @@
             tools:layout_editor_absoluteY="202dp" />
 
         <TextView
-            android:id="@+id/textView3_Detail2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="62dp"
@@ -157,7 +151,6 @@
             tools:layout_editor_absoluteY="202dp" />
 
         <TextView
-            android:id="@+id/textView3_Detail3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="181dp"
@@ -171,7 +164,6 @@
 
         <!-- 텍스트뷰 - 탈퇴안내 문구4 -->
         <TextView
-            android:id="@+id/textView4_Detail1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -184,7 +176,6 @@
             tools:layout_editor_absoluteY="218dp" />
 
         <TextView
-            android:id="@+id/textView4_Detail2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="81dp"
@@ -198,7 +189,6 @@
             tools:layout_editor_absoluteY="218dp" />
 
         <TextView
-            android:id="@+id/textView4_Detail3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="154dp"
@@ -212,7 +202,6 @@
 
         <!-- 텍스트뷰 - 탈퇴안내 문구5 -->
         <TextView
-            android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
@@ -225,8 +214,6 @@
             tools:layout_editor_absoluteY="234dp" />
 
         <!-- 확인 체크박스 -->
-
-        <!-- EditText - 비밀번호 확인 -->
         <CheckBox
             android:id="@+id/checkBox"
             android:layout_width="wrap_content"
@@ -240,6 +227,7 @@
             tools:layout_editor_absoluteX="18dp"
             tools:layout_editor_absoluteY="339dp" />
 
+        <!-- EditText - 비밀번호 확인 -->
         <EditText
             android:id="@+id/inputRePw2"
             android:layout_width="380dp"
@@ -300,8 +288,6 @@
             tools:ignore="TextContrastCheck" />
 
     </RelativeLayout>
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

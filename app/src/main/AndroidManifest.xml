@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.project.petfinder">
 
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
@@ -15,25 +16,6 @@
         android:theme="@style/Theme.MyApplication">
         <!--        android:hardwareAccelerated="false"-->
 
-        <activity
-            android:name=".MyDiaryViewFragment"
-            android:exported="false" />
-        <activity
-            android:name=".MyDiaryWriteFragment"
-            android:exported="false" />
-        <activity
-            android:name=".MyInfoDeleteFragment"
-            android:exported="false" />
-
-        <activity
-            android:name=".PetInfoRegisterFragment"
-            android:exported="false" />
-        <activity
-            android:name=".MyInfoChangePwFragment"
-            android:exported="false" />
-        <activity
-            android:name=".PetInfoModifyFragment"
-            android:exported="false" />
         <activity
             android:name=".Calendar_New_Schedule_Activity"
             android:exported="false" />

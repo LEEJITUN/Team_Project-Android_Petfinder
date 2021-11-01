@@ -8,11 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.project.petfinder.MyDiaryWriteFragment
-import com.project.petfinder.PetInfoModifyFragment
+import com.project.petfinder.*
 
-import com.project.petfinder.PetInfoRegisterFragment
-import com.project.petfinder.R
 import com.project.petfinder.fragment.CalendarFragment
 import com.project.petfinder.fragment.HomeFragment
 
@@ -37,7 +34,14 @@ class CommonNavActivity : AppCompatActivity() , BottomNavigationView.OnNavigatio
     // 내정보 - 다이어리 쓰기
     private lateinit var  myDiaryWriteFragment: MyDiaryWriteFragment
 
+    // 내정보 - 다이어리 보기
+    private lateinit var  myDiaryViewFragment: MyDiaryViewFragment
 
+    // 내정보 - 비밀번호 변경
+    private lateinit var  myInfoChangePwFragment: MyInfoChangePwFragment
+
+    // 내정보 - 회원탈퇴
+    private lateinit var  myInfoDeleteFragment: MyInfoDeleteFragment
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -89,31 +93,54 @@ class CommonNavActivity : AppCompatActivity() , BottomNavigationView.OnNavigatio
                 supportFragmentManager.beginTransaction().replace(R.id.frame_fragments, finderTalkMainFragment).commit()
             }
 
-            "MY_1" -> { // 내 정보 -> 등록하기 버튼 클릭
+            "MY_1" -> { // 반려동물 등록하기 페이지
 
                 petInfoRegisterFragment = PetInfoRegisterFragment.newInstance()
                 supportFragmentManager.beginTransaction().replace(R.id.frame_fragments, petInfoRegisterFragment).commit()
             }
 
-            "MY_2" -> { // 내 정보 -> 수정하기 이미지 버튼 클릭
+            "MY_2" -> { // 반려동물 수정하기 페이지
                 petInfoModifyFragment = PetInfoModifyFragment.newInstance()
                 supportFragmentManager.beginTransaction().replace(R.id.frame_fragments, petInfoModifyFragment).commit()
             }
 
-            "MY_3" -> { // 내 정보 - 다이어리 추가하기
+            "MY_3" -> { // 다이어리 추가하기 페이지
 
                 myDiaryWriteFragment = MyDiaryWriteFragment.newInstance()
                 supportFragmentManager.beginTransaction().replace(R.id.frame_fragments, myDiaryWriteFragment).commit()
             }
 
+            "MY_4" -> { // 다이어리 보기 페이지
 
-//            20 -> { // ( 일단 보류 안보여서 )내정보 - 뒤로가기 버튼 클릭 -> 내정보 화면으로 이동 버튼 이름이 동일하면 같이 써도 되지 않을까?
-//
-//                mypageFragment = MyInfoFragment.newInstance()
-//                supportFragmentManager.beginTransaction().replace(R.id.frame_fragments, mypageFragment).commit()
-//            }
+                myDiaryViewFragment = MyDiaryViewFragment.newInstance()
+                supportFragmentManager.beginTransaction().replace(R.id.frame_fragments, myDiaryViewFragment).commit()
+            }
 
-            "MY_4" -> { // 내 정보 - 등록 확인버튼 클릭 시 -> 내정보 화면으로 이동 (같이 쓰는 중)
+            "MY_5" -> { // 비밀번호 변경 페이지
+
+                myInfoChangePwFragment = MyInfoChangePwFragment.newInstance()
+                supportFragmentManager.beginTransaction().replace(R.id.frame_fragments, myInfoChangePwFragment).commit()
+            }
+
+            "MY_6" -> { // 회원 탈퇴 페이지
+
+                myInfoDeleteFragment = MyInfoDeleteFragment.newInstance()
+                supportFragmentManager.beginTransaction().replace(R.id.frame_fragments, myInfoDeleteFragment).commit()
+            }
+
+            "MY_7" -> { // 회원 탈퇴 페이지
+
+                myInfoDeleteFragment = MyInfoDeleteFragment.newInstance()
+                supportFragmentManager.beginTransaction().replace(R.id.frame_fragments, myInfoDeleteFragment).commit()
+            }
+
+            "MY_8" -> { // 내 정보 메인으로 이동 (확인/등록)
+
+                mypageFragment = MyInfoFragment.newInstance()
+                supportFragmentManager.beginTransaction().replace(R.id.frame_fragments, mypageFragment).commit()
+            }
+
+            "MY_9" -> { // 내 정보 메인으로 이동 (취소)
 
                 mypageFragment = MyInfoFragment.newInstance()
                 supportFragmentManager.beginTransaction().replace(R.id.frame_fragments, mypageFragment).commit()

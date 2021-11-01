@@ -42,7 +42,7 @@ class MyDiaryWriteFragment : Fragment() {
 
         btnSubmit.setOnClickListener(View.OnClickListener {
 
-            commonNavActivity.change_to_Menu("MY_4")
+            commonNavActivity.change_to_Menu("MY_8")
 
         })
 

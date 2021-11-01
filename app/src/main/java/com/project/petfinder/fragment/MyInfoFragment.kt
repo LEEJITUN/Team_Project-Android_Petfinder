@@ -62,15 +62,35 @@ class MyInfoFragment : Fragment() {
             commonNavActivity.change_to_Menu("MY_3")
         })
 
+        // 다이어리 보기 버튼
+        var btnDiaryView = view?.findViewById(R.id.btnDiaryView) as Button
+
+        btnDiaryView.setOnClickListener(View.OnClickListener {
+            commonNavActivity.change_to_Menu("MY_4")
+        })
+
+        // 비밀번호 변경 버튼
+        var btnPwchange = view?.findViewById(R.id.btnPwchange) as Button
+
+        btnPwchange.setOnClickListener(View.OnClickListener {
+            commonNavActivity.change_to_Menu("MY_5")
+        })
+
+        // 회원 탈퇴 버튼
+        var btnWithdrawal = view?.findViewById(R.id.btnWithdrawal) as Button
+
+        btnWithdrawal.setOnClickListener(View.OnClickListener {
+            commonNavActivity.change_to_Menu("MY_6")
+        })
+
+        // 로그아웃 버튼
+//        var btnLogout = view?.findViewById(R.id.btnLogout) as Button
+//
+//        btnWithdrawal.setOnClickListener(View.OnClickListener {
+//            commonNavActivity.change_to_Menu("MY_7")
+//        })
+
         return view
     }
 }
 
-//class MyInfoFragment : Fragment() {
-//    override fun onCreateView(
-//        inflater: LayoutInflater, container: ViewGroup?,
-//        savedInstanceState: Bundle?
-//    ): View? {
-//        return inflater.inflate(R.layout.activity_my_info, container, false)
-//    }
-//}

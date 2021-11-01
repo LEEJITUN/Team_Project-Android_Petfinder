@@ -35,12 +35,21 @@ class PetInfoModifyFragment : Fragment() {
         var view: View =
             inflater.inflate(R.layout.activity_pet_info_modify, container, false) //반환형 : View }
 
-        // 등록하기 버튼
+        // 확인 버튼 클릭 시 -> 내정보 화면으로 이동
         var btnSubmit = view?.findViewById(R.id.btnSubmit) as Button
 
         btnSubmit.setOnClickListener(View.OnClickListener {
 
-            commonNavActivity.change_to_Menu("MY_4")
+            commonNavActivity.change_to_Menu("MY_8")
+
+        })
+
+        // 취소 버튼 클릭 시 -> 내정보 화면으로 이동
+        var btnCancel = view?.findViewById(R.id.btnCancel) as Button
+
+        btnCancel.setOnClickListener(View.OnClickListener {
+
+            commonNavActivity.change_to_Menu("MY_9")
 
         })
 
