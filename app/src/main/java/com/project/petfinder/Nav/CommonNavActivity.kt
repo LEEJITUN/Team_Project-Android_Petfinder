@@ -49,15 +49,13 @@ class CommonNavActivity : AppCompatActivity() , BottomNavigationView.OnNavigatio
         setContentView(R.layout.activity_common_nav)
 
         var bottom_navigation = findViewById<com.google.android.material.bottomnavigation.BottomNavigationView>(R.id.bottom_navigation)
-        val fragment: Fragment = FinderTalkMainFragment.newInstance()//33~34 Testing -준영
-        val transaction = supportFragmentManager.beginTransaction()
+
 
         bottom_navigation.setOnNavigationItemSelectedListener(this)
         homeFragment = HomeFragment.newInstance()
         supportFragmentManager.beginTransaction().add(R.id.frame_fragments, homeFragment).commit()
 
-        transaction.replace(R.id.coordinatorLayout, fragment, "main_fragment")
-    }//40줄은 activity_findertalk파일 내 액션바쪽의 레이아웃
+    }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
