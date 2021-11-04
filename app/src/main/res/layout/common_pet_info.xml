@@ -6,7 +6,7 @@
     android:layout_height="540dp"
     android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    >
+    tools:context=".fragment.CommonPetInfo">
 
     <!-- 이름 -->
     <LinearLayout
@@ -81,8 +81,8 @@
                 android:layout_height="35dp"
                 android:layout_marginLeft="250dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/calender"
-                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                android:clickable="true"
+                android:background="@drawable/calender" />
 
             <TextView
                 android:id="@+id/btn_pet_brith"

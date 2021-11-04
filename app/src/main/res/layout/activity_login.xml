@@ -5,9 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".LoginActivity"
-
-    >
+    tools:context=".LoginActivity">
     <include
         layout="@layout/toolbar_yellow"
         android:id="@+id/toolbar"/>
@@ -71,6 +69,35 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.727"
         tools:ignore="TextContrastCheck" />
+
+
+    <Button
+        android:id="@+id/btnKakaoLogin"
+        android:layout_width="328dp"
+        android:layout_height="50dp"
+        android:background="@drawable/kakao_login_large_wide"
+        android:textSize="30dp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.458"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9"
+        tools:ignore="TextContrastCheck" />
+
+
+<!--    <com.nhn.android.naverlogin.ui.view.OAuthLoginButton-->
+<!--        android:id="@+id/btnNaverLogin"-->
+<!--        android:layout_width="328dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:background="@drawable/naverbutton"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/btnKakaoLogin"-->
+<!--        app:layout_constraintHorizontal_bias="0.458"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.98"/>-->
 
     <TextView
         android:id="@+id/btnJoin"
