@@ -58,7 +58,6 @@
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="15dp"
             android:layout_marginEnd="18dp"
             android:fontFamily="@font/jalnan"
             android:text="생년월일"
@@ -85,13 +84,17 @@
                 android:background="@drawable/calender" />
 
             <TextView
-                android:id="@+id/btn_pet_brith"
+                android:id="@+id/tv_pet_brith"
                 android:layout_width="300dp"
                 android:layout_height="56dp"
                 android:layout_marginEnd="18dp"
                 android:background="@drawable/round"
                 android:ems="10"
-                android:fontFamily="@font/jalnan" />
+                android:gravity="center_vertical"
+                android:paddingLeft="18dp"
+                android:textSize="15dp"
+                android:hint="year-month-date"
+                android:fontFamily="@font/micross" />
 
         </RelativeLayout>
 
