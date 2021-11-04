@@ -31,12 +31,6 @@ class CommonNavActivity : AppCompatActivity() , BottomNavigationView.OnNavigatio
     // 내정보 - 반려동물 수정하기
     private lateinit var  petInfoModifyFragment: PetInfoModifyFragment
 
-    // 내정보 - 다이어리 쓰기
-    private lateinit var  myDiaryWriteFragment: MyDiaryWriteFragment
-
-    // 내정보 - 다이어리 보기
-    private lateinit var  myDiaryViewFragment: MyDiaryViewFragment
-
     // 내정보 - 비밀번호 변경
     private lateinit var  myInfoChangePwFragment: MyInfoChangePwFragment
 
@@ -100,18 +94,6 @@ class CommonNavActivity : AppCompatActivity() , BottomNavigationView.OnNavigatio
             "MY_2" -> { // 반려동물 수정하기 페이지
                 petInfoModifyFragment = PetInfoModifyFragment.newInstance()
                 supportFragmentManager.beginTransaction().replace(R.id.frame_fragments, petInfoModifyFragment).commit()
-            }
-
-            "MY_3" -> { // 다이어리 추가하기 페이지
-
-                myDiaryWriteFragment = MyDiaryWriteFragment.newInstance()
-                supportFragmentManager.beginTransaction().replace(R.id.frame_fragments, myDiaryWriteFragment).commit()
-            }
-
-            "MY_4" -> { // 다이어리 보기 페이지
-
-                myDiaryViewFragment = MyDiaryViewFragment.newInstance()
-                supportFragmentManager.beginTransaction().replace(R.id.frame_fragments, myDiaryViewFragment).commit()
             }
 
             "MY_5" -> { // 비밀번호 변경 페이지

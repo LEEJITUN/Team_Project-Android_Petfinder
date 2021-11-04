@@ -55,19 +55,6 @@ class MyInfoFragment : Fragment() {
             commonNavActivity.change_to_Menu("MY_2")
         })
 
-        // 다이어리 추가하기 버튼
-        var btnDiary = view?.findViewById(R.id.btnDiary) as Button
-
-        btnDiary.setOnClickListener(View.OnClickListener {
-            commonNavActivity.change_to_Menu("MY_3")
-        })
-
-        // 다이어리 보기 버튼
-        var btnDiaryView = view?.findViewById(R.id.btnDiaryView) as Button
-
-        btnDiaryView.setOnClickListener(View.OnClickListener {
-            commonNavActivity.change_to_Menu("MY_4")
-        })
 
         // 비밀번호 변경 버튼
         var btnPwchange = view?.findViewById(R.id.btnPwchange) as Button
