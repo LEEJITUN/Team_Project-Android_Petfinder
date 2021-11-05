@@ -1,5 +1,6 @@
 package com.project.petfinder
 
+import android.content.ContentValues.TAG
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
@@ -7,6 +8,7 @@ import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.telephony.SmsManager
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -89,6 +91,9 @@ class Join_PhoneNumber_Activity : AppCompatActivity() {
 
                 // 회원 정보 입력 화면 이동
                 val intent = Intent(applicationContext, Join_UserInfo_Activity::class.java)
+                // 폰번호 보냄
+                intent.putExtra("phone", inputPhoneNum.text.toString())
+                Log.d(TAG,"phone:"+inputPhoneNum.text.toString())
                 startActivity(intent)
             }else{
                 Toast.makeText(getApplicationContext(), "인증번호가 일치하지 않습니다.", Toast.LENGTH_SHORT).show()

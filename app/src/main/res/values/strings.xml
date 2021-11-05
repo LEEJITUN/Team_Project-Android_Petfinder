@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">PetFinder</string>
-    <!-- TODO: Remove or change this placeholder text -->
+<!--    <string name="naver_client_id">xxx</string>-->
+<!--    <string name="naver_client_secret">xxx</string>-->
+<!--    <string name="naver_client_name">xxx</string>-->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
