@@ -1,38 +1,29 @@
 package com.project.petfinder
 
-import android.content.ContentValues.TAG
-import android.content.Intent
+
 import android.os.Bundle
-import android.util.Log
 import android.util.Patterns
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.ktx.Firebase
 import com.project.petfinder.databinding.ActivityJoinUerInfoBinding
 import java.util.regex.Pattern
-import com.google.firebase.storage.FirebaseStorage
-import com.project.petfinder.Nav.CommonNavActivity
 import com.project.petfinder.firebaseuser.UserService
 import com.project.petfinder.firebaseuser.UserModel
 
-
+/**
+ * @Class : Join_UserInfo_Activity
+ * @Description : 회원가입 시의 기능들
+ *
+ */
 class Join_UserInfo_Activity : AppCompatActivity() {
-
-    // Firebase 비동기 잡을시 지움
-    private lateinit var auth: FirebaseAuth
-    private lateinit var storage: FirebaseStorage
-    private lateinit var database: FirebaseDatabase
 
     // bindig
     private lateinit var binding : ActivityJoinUerInfoBinding
 
     // Message
     private val MSG1 :String = "이름을 입력해주세요"
-    private val MSG2 :String  = "이메일을 입력해주세요"
+    private val MSG2 :String = "이메일을 입력해주세요"
     private val MSG3 :String = "비밀번호를 입력해주세요"
     private val MSG4 :String = "비밀번호 재입력해주세요"
     private val MSG5 :String = "비밀번호를 똑같이 입력해주세요"
@@ -41,15 +32,9 @@ class Join_UserInfo_Activity : AppCompatActivity() {
     private val MSG8 :String = "비밀번호 형식을 지켜주세요."
 
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_join_uer_info)
-
-        // 값 할당 비동기 잡을시 지움
-        auth = Firebase.auth
-        storage = FirebaseStorage.getInstance()
-        database = FirebaseDatabase.getInstance()
 
         val receive_intent = intent
 
@@ -64,7 +49,8 @@ class Join_UserInfo_Activity : AppCompatActivity() {
             var inputRePw = binding.inputRePw.text.toString()
 
 
-            /***** 유효성 검사 *****/
+            // TODO("나중에 따로 메소드로 빼기")
+            /*************** 유효성 검사 ***************/
             if(NullCheck(inputName)) {
                 Toast.makeText(this, MSG1, Toast.LENGTH_LONG).show()
              
@@ -117,11 +103,14 @@ class Join_UserInfo_Activity : AppCompatActivity() {
 
                 return@setOnClickListener
             }
+            /*********************************************/
 
+
+            // 폰번호 인증 시 받은 핸드폰 번호를 phone변수에 할당
             val phone = receive_intent.getStringExtra("phone")
 
 
-            /** FireBase Create userModel  **/
+            /*************** FireBase Create userModel ***************/
 
             // usermodel 정보 할당
             var usermodel : UserModel = UserModel(
@@ -132,13 +121,14 @@ class Join_UserInfo_Activity : AppCompatActivity() {
                 "EMPTY"
             )
 
-
             // 유저 서비스 객체 생성
             var userService = UserService()
 
-
+            // 파이어베이스에 추가
             userService.createFireBaseAuthUser(usermodel,this,Join_User_PetInfo_Activity::class.java)
-            
+            /*********************************************/
+
+
             /** 준영님 글쓰기 테스트 할 때 위에꺼 주석하고 이거 주석 풀고 ㄱㄱ!!**/
            // userService.createFireBaseAuthUser(usermodel,this, CommonNavActivity::class.java)
 
@@ -146,42 +136,14 @@ class Join_UserInfo_Activity : AppCompatActivity() {
         }
     }
 
-//    //비동기 잡을시 지움
-//    fun createFireBaseUser(userModel : UserModel){
-//
-//        // id,pw 할당
-//        val inputEmail = userModel.userEmail
-//        val inputPw = userModel.userPassword
-//
-//        // null Check
-//        if(!(NullCheck(inputEmail) || NullCheck(inputPw))){
-//            // firebase auth user create
-//            auth.createUserWithEmailAndPassword(inputEmail, inputPw).addOnCompleteListener(this) { task ->
-//                if (task.isSuccessful) {
-//
-//                    // uid에 task, 선택된 사진을 file에 할당
-//                    val uid = task.getResult()?.user?.uid
-//                    if (uid != null) {
-//                        userModel.uid = uid
-//                        database.getReference().child("users").child(uid)
-//                            .setValue(userModel)
-//                    }
-//                    // 성공 시 펫 정보 이동
-//                    val intent = Intent(this, Join_User_PetInfo_Activity::class.java)
-//                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-//                    startActivity(intent)
-//
-//                } else {
-//                    Toast.makeText(this, "실패", Toast.LENGTH_LONG).show()
-//                }
-//            }
-//
-//        }
-//    }
-
-    //  null check function
+    /**
+     * @Service : NullCheck - null이나 "" 공백 체크
+     * @return : Blooean (빈값이면 : true | 빈값이 아니면: false)
+     */
     fun NullCheck(inputData : String):Boolean {
         return inputData.isEmpty() || inputData.equals("")
     }
+
+
 
 }

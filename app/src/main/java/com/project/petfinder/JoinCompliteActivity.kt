@@ -17,6 +17,10 @@ class JoinCompliteActivity : AppCompatActivity() {
         // 메인 화면으로 이동 ( MainActivity )
         btnRevercode.setOnClickListener(View.OnClickListener {
             val intent = Intent(applicationContext, CommonNavActivity::class.java)
+
+            // 펫저장에서 uid받아서 넘겨야함
+
+
             startActivity(intent)
         })
     }
