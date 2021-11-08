@@ -10,6 +10,7 @@ import com.project.petfinder.fragment.CalendarFragment
 import com.project.petfinder.fragment.HomeFragment
 
 import com.project.petfinder.fragment.MyInfoFragment
+import com.project.petfinder.fragment.TalkBoardFragment
 
 /**
  * @Class : CommonNavActivity
@@ -22,7 +23,7 @@ class CommonNavActivity : AppCompatActivity() , BottomNavigationView.OnNavigatio
     //멤버변수
     private lateinit var homeFragment: HomeFragment
     private lateinit var calendarFragment: CalendarFragment
-    private lateinit var finderTalkMainFragment: FinderTalkMainFragment
+    private lateinit var talkBoardFragment: TalkBoardFragment
     private lateinit var mypageFragment: MyInfoFragment
 
     // 내정보 - 반려동물 등록하기
@@ -54,7 +55,6 @@ class CommonNavActivity : AppCompatActivity() , BottomNavigationView.OnNavigatio
         bottom_navigation.setOnNavigationItemSelectedListener(this)
         homeFragment = HomeFragment.newInstance()
         supportFragmentManager.beginTransaction().add(R.id.frame_fragments, homeFragment).commit()
-
     }
 
     /**
@@ -62,6 +62,7 @@ class CommonNavActivity : AppCompatActivity() , BottomNavigationView.OnNavigatio
      * onNavigationItemSelected - 네비 바텀을 구성하는 요소들 할당
      * @Description: 네비 바텀을 구성하는 요소들을 셋팅하고 그것을 눌럿을 경우 supportFragmentManager가 프레임 레이아웃을 해당 요소로 변경
      */
+    //replace 화면을 바꾼다.
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
 
@@ -74,8 +75,8 @@ class CommonNavActivity : AppCompatActivity() , BottomNavigationView.OnNavigatio
                 supportFragmentManager.beginTransaction().replace(R.id.frame_fragments, calendarFragment).commit()
             }
             R.id.action_fimderTalk -> {
-                finderTalkMainFragment = FinderTalkMainFragment.newInstance()
-                supportFragmentManager.beginTransaction().replace(R.id.frame_fragments, finderTalkMainFragment).commit()
+                talkBoardFragment = TalkBoardFragment.newInstance()
+                supportFragmentManager.beginTransaction().replace(R.id.frame_fragments, talkBoardFragment).commit()
             }
 
             R.id.action_mypage -> {
@@ -96,8 +97,8 @@ class CommonNavActivity : AppCompatActivity() , BottomNavigationView.OnNavigatio
         when (str) {
             "HOME_1" -> { // 홈 -> 펫핀더
                 // add the fragement here
-                finderTalkMainFragment = FinderTalkMainFragment.newInstance()
-                supportFragmentManager.beginTransaction().replace(R.id.frame_fragments, finderTalkMainFragment).commit()
+                talkBoardFragment = TalkBoardFragment.newInstance()
+                supportFragmentManager.beginTransaction().replace(R.id.frame_fragments, talkBoardFragment).commit()
             }
 
             "MY_1" -> { // 반려동물 등록하기 페이지

@@ -1,4 +1,4 @@
-package com.project.petfinder
+package com.project.petfinder.talkBoard
 
 import android.content.Intent
 import android.graphics.Bitmap
@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.ktx.storage
+import com.project.petfinder.R
 import com.project.petfinder.databinding.ActivityTalkBoardWriteBinding
 import com.project.petfinder.utils.FBAuth
 import com.project.petfinder.utils.FBRef

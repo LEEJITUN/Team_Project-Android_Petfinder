@@ -1,4 +1,4 @@
-package com.project.petfinder
+package com.project.petfinder.talkBoard
 
 data class DataModel(
     val title : String = "",
