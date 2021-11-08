@@ -24,6 +24,13 @@ class MyInfoChangePwFragment : Fragment() {
     lateinit var commonNavActivity: CommonNavActivity
     lateinit var binding:ActivityMyInfoChangePwBinding
 
+    // Message 상수로 할당
+    private val MSG1 :String = "현재 비밀번호를 입력해주세요"
+    private val MSG2 :String = "변경 할 비밀번호를 입력해주세요"
+    private val MSG3 :String = "재확인 비밀번호를 입력해주세요"
+    private val MSG4 :String = "변결 할 비밀번호와 재확인할 비밀번호가 일치하지 않습니다."
+
+
     companion object {
         fun newInstance(): MyInfoChangePwFragment = MyInfoChangePwFragment()
     }
@@ -87,12 +94,29 @@ class MyInfoChangePwFragment : Fragment() {
 
 
         // email,password 값 할당
-        val newPassword = binding.inputRePw1.text.toString()
         val prePassword = binding.inputPw.text.toString()
+        val newPassword = binding.inputRePw1.text.toString()
+        val newPassword2 = binding.inputRePw2.text.toString()
 
         /*** 유효성 체크 ***/
-        // TODO ("비밀번호 유효성 체크 만들어야함 ")
+        if(NullCheck(prePassword)) {
+            Toast.makeText(commonNavActivity, MSG1, Toast.LENGTH_LONG).show()
+            return
+        }
+        if(NullCheck(newPassword)) {
+            Toast.makeText(commonNavActivity, MSG2, Toast.LENGTH_LONG).show()
+            return
+        }
 
+        if(!newPassword.equals(newPassword2)) {
+            Toast.makeText(commonNavActivity, MSG3, Toast.LENGTH_LONG).show()
+            return
+        }
+
+        if(!newPassword.equals(newPassword2)) {
+            Toast.makeText(commonNavActivity, MSG4, Toast.LENGTH_LONG).show()
+            return
+        }
 
         /*** FireBase에서 비밀번호 수정 ***/
         // firebase auth user create
@@ -114,10 +138,20 @@ class MyInfoChangePwFragment : Fragment() {
                 // 내정보 페이지로 이동
                 commonNavActivity.change_to_Menu("MY_8")
             } else {
-                Toast.makeText(context, "실패", Toast.LENGTH_LONG).show()
+                Toast.makeText(context, "비밀번호가 같지 않습니다.", Toast.LENGTH_LONG).show()
+//                Toast.makeText(context, "실패", Toast.LENGTH_LONG).show()
             }
         }
         /******************************/
 
+    }
+
+
+    /**
+     * @Service : NullCheck - null이나 "" 공백 체크
+     * @return : Blooean (빈값이면 : true | 빈값이 아니면: false)
+     */
+    fun NullCheck(inputData : String):Boolean {
+        return inputData.isEmpty() || inputData.equals("")
     }
 }
