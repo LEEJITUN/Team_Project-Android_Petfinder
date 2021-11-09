@@ -10,6 +10,7 @@ android {
     compileSdk 31
     buildFeatures {
         dataBinding = true
+        viewBinding true
     }
 //    buildFeatures{
 ////        viewBinding true
@@ -58,6 +59,8 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-script-runtime:1.5.20"
     implementation 'com.google.android.material:material:1.3.0-alpha01'
     implementation 'androidx.viewpager2:viewpager2:1.0.0'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
 
     // 인디케이터 애니메이션
     implementation 'com.tbuonomo.andrui:viewpagerdotsindicator:4.1.2'
@@ -78,5 +81,8 @@ dependencies {
 
     implementation 'com.firebaseui:firebase-ui-storage:6.4.0'
 
+    implementation 'de.hdodenhof:circleimageview:3.1.0' //원형 이미지 XML 컴퍼넌트
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.7.+' //이미지 자르기 라이브러리
+    implementation 'com.squareup.picasso:picasso:2.71828' //이미지 다운로드 및 캐싱 라이브러리
 
 }

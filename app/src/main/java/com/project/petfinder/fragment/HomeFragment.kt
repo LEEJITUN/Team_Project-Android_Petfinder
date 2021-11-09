@@ -45,6 +45,8 @@ class HomeFragment : Fragment() {
         super.onAttach(context)
 
         commonNavActivity = getActivity() as CommonNavActivity
+
+
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle? ): View? {

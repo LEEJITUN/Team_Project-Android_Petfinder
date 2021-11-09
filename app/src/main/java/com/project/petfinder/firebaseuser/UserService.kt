@@ -3,6 +3,8 @@ package com.project.petfinder.firebaseuser
 
 import android.content.ContentValues.TAG
 import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.drawable.BitmapDrawable
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -11,8 +13,10 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.ktx.storage
 import com.project.petfinder.Nav.CommonNavActivity
 import com.project.petfinder.utils.FBRef
+import java.io.ByteArrayOutputStream
 
 
 /*** FireBase User Service ***/
@@ -66,6 +70,7 @@ class UserService {
                         FBRef.userInfoRef.child(uid!!).child("phone").setValue(userModel.phone)
                         FBRef.userInfoRef.child(uid!!).child("profileImageUrl").setValue(userModel.profileImageUrl)
 
+
                         // 메인으로 이동
                         val intent = Intent(context, CommonNavActivity::class.java)
                         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
@@ -99,6 +104,7 @@ class UserService {
                 }
         }
     }
+
 
     /***
      *  NullCheck() - 해당 String data가 null or "" 인지 알려주는 메소드

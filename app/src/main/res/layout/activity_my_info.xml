@@ -26,13 +26,25 @@
             app:layout_constraintVertical_bias="0.0">
 
             <!-- 이미지뷰 -> 나중에 변경 (프로필 추가) -->
-            <ImageView
-                android:id="@+id/myProfile"
+<!--            <ImageView-->
+<!--                android:id="@+id/myProfile"-->
+<!--                android:layout_width="100dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:layout_marginLeft="20dp"-->
+<!--                android:layout_marginTop="30dp"-->
+<!--                android:src="@drawable/ic_baseline_person_24" />-->
+
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="30dp"
-                android:src="@drawable/ic_baseline_person_24" />
+                android:id="@+id/myProfile"
+                />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/init_profileimg_reset_btn"
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp" />
 
             <!-- 텍스트 뷰 - 내 이름 -->
             <TextView

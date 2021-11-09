@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navi"
+    app:startDestination="@id/myInfoFragment">
+
+    <fragment
+        android:id="@+id/myInfoFragment"
+        android:name="com.project.petfinder.fragment.MyInfoFragment"
+        android:label="MyInfoFragment" >
+        <action
+            android:id="@+id/action_myInfoFragment_to_myInfoChangePwFragment"
+            app:destination="@id/myInfoChangePwFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myInfoChangePwFragment"
+        android:name="com.project.petfinder.MyInfoChangePwFragment"
+        android:label="MyInfoChangePwFragment" >
+        <action
+            android:id="@+id/action_myInfoChangePwFragment_to_myInfoFragment"
+            app:destination="@id/myInfoFragment" />
+    </fragment>
+</navigation>
